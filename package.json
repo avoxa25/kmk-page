@@ -1,5 +1,5 @@
 {
-  "name": "ready-gulp-webpack",
+  "name": "kmk-landing",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "dependencies": {
@@ -42,5 +42,5 @@
     "url": "https://github.com/memoryx3/kmk-landing/issues"
   },
   "homepage": "https://github.com/memoryx3/kmk-landing#readme",
-  "description": "ReadyGulp is tuned gulp for easy start of HTML/CSS(Sass)/JS development"
+  "description": "Easy webdev for kmk company"
 }
