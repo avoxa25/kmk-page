@@ -62,7 +62,7 @@ const towebp = () => {
   return gulp.src('src/img/*.min.{jpg,png}', { read: true })
     .pipe(clean())
     .pipe(webp({
-      quality: 50
+      quality: 75
     }))
     .pipe(gulp.dest('dist/img'))
 }

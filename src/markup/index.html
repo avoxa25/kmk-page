@@ -48,7 +48,7 @@
   <main>
     <div class="service-wrapper">
       <section class="service-inner">
-        <div class="service-group">
+        <div class="service-container">
           <h2>Абонентское юридическое обслуживание</h2>
           <ul class="service-list">
             <li>Круглосуточная юридическая помощь</li>
@@ -65,48 +65,52 @@
           <input id="clientPhone" type="tel" placeholder="Введите Ваш телефон" required>
           <label for="clientComment">Комментарий:</label>
           <input id="clientComment" type="text" placeholder="Введите Ваш комментарий">
-          <button type="button" id="sumbitClient">ОТПРАВИТЬ</button>
+          <button type="submit" submit="javascript(void);" id="sumbitClient">ОТПРАВИТЬ</button>
         </form>
       </section>
     </div>
 
-    <div>
-      <section>
-        <h2>Мы защитили</h2>
-        <p>
-          <span>32 млрд. ₽</span>
-          <span>объем защищенных активов</span>
+    <div class="defended-wrapper">
+      <section class="defended-inner">
+        <h2 class="visually-hidden">Мы защитили</h2>
+        <p class="defended-statistic">
+          <span class="text-large">32 млрд. ₽</span>
+          <span class="text-little">объем защищенных активов</span>
         </p>
       </section>
     </div>
 
-    <div>
-      <section>
-        <img src="">
-        <h2>Работая с нами Вы получаете</h2>
-        <ul>
-          <li>
-            <b>Команду высоко-квалифицированных юристов</b>
-            которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
-          </li>
-          <li>
-            <b>Собственный юридический департамент</b>
-            которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
-          </li>
-          <li>
-            <b>Снижение затрат</b>
-            которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
-          </li>
-          <li>
-            <b>Удобные условия сотрудничества</b>
-            которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
-          </li>
-        </ul>
+    <div class="advantages-wrapper">
+      <section class="advantages-inner">
+        <div class="image-container">
+          <img src="img/example.min.webp" alt="Команда КМК" width="100%" height="auto">
+        </div>
+        <div class="advantages-container">
+          <h2>Работая с нами Вы получаете</h2>
+          <ul class="advantages-list">
+            <li class="team">
+              <b>Команду высоко-квалифицированных юристов</b>
+              которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
+            </li>
+            <li class="justice">
+              <b>Собственный юридический департамент</b>
+              которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
+            </li>
+            <li class="cash">
+              <b>Снижение затрат</b>
+              которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
+            </li>
+            <li class="partnership">
+              <b>Удобные условия сотрудничества</b>
+              которые будут справляться с правовыми вопросами вашей компании гораздо эффективнее одного штатного юриста.
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
 
-    <div>
-      <section>
+    <div class="request-wrapper">
+      <section class="request-inner">
         <h2>Оставить заявку</h2>
         <p>
           Оставьте заявку на консультацию, заполните форму ниже и получите дополнительную скидку
@@ -116,11 +120,12 @@
       </section>
     </div>
 
-    <div>
-      <section>
+    <div class="tariffs-wrapper">
+      <section class="tariffs-inner">
         <h2>Тарифы на юридический аутсорсинг</h2>
+        <!-- TABLE GIVEN BY CLIENT -->
         <table class="price-table">
-          <caption>Тарифы на юридический аутсорсинг</caption>
+          <caption class="visually-hidden">Тарифы на юридический аутсорсинг</caption>
           <thead>
             <tr>
               <th scope="col" class="header standard">
@@ -249,22 +254,22 @@
       </section>
     </div>
 
-    <div>
-      <section>
+    <div class="config-wrapper">
+      <section class="config-inner">
         <h2>Собрать свой тариф</h2>
-        <button id="buttonPopup">Собрать свой тариф</button>
         <p>
           Не подошел ни один тариф под ключ?
           Соберем индивидуальный пакет под ваши задачи
         </p>
+        <button id="buttonPopup">СОБРАТЬ ТАРИФ</button>
       </section>
     </div>
 
-    <div>
-      <section>
+    <div class="profit-wrapper">
+      <section class="profit-inner">
         <h2>
           Юридический аутсорсинг - это
-          <span>выгода до 70 %</span>
+          <span class="red">выгода до 70 %</span>
         </h2>
         <table>
           <caption>Расходы на юридический аутсорсинг от КМК</caption>
@@ -318,7 +323,7 @@
     </div>
 
     <div>
-      <section>
+      <!-- <section>
         <h2 class="header-ico header-color mb25">Наши юристы постоянные спикеры:</h2>
         <ul class="media-list">
           <li>
@@ -339,7 +344,7 @@
               alt="Радио Говорит Москва 94.8fm">
           </li>
         </ul>
-      </section>
+      </section> -->
     </div>
 
     <div>
