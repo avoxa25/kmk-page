@@ -57,7 +57,7 @@
             <li>Защита ваших активов</li>
           </ul>
         </div>
-        <form class="contact-us">
+        <form class="contact-us" action="javascript:void(0);">
           <p>Отправьте заявку</p>
           <label for="clientName">Имя*:</label>
           <input id="clientName" type="text" placeholder="Введите Ваше имя" required>
@@ -65,7 +65,7 @@
           <input id="clientPhone" type="tel" placeholder="Введите Ваш телефон" required>
           <label for="clientComment">Комментарий:</label>
           <input id="clientComment" type="text" placeholder="Введите Ваш комментарий">
-          <button type="submit" submit="javascript(void);" id="sumbitClient">ОТПРАВИТЬ</button>
+          <button type="submit" id="sumbitClient">ОТПРАВИТЬ</button>
         </form>
       </section>
     </div>
@@ -271,88 +271,92 @@
           Юридический аутсорсинг - это
           <span class="red">выгода до 70 %</span>
         </h2>
-        <table>
-          <caption>Расходы на юридический аутсорсинг от КМК</caption>
-          <tbody>
-            <tr>
-              <td>Абонентское обслуживание</td>
-              <td>25 000 ₽</td>
-            </tr>
-            <tr>
-              <td>Налоги и страховые взносы</td>
-              <td>0 ₽</td>
-            </tr>
-            <tr>
-              <td>Справочно-правовые системы</td>
-              <td>0 ₽</td>
-            </tr>
-            <tr>
-              <td>Повышение квалификации</td>
-              <td>0 ₽</td>
-            </tr>
-          </tbody>
-        </table>
-        <table>
-          <caption>Расходы на штатного юриста</caption>
-          <tbody>
-            <tr>
-              <td>Абонентское обслуживание</td>
-              <td>25 000 ₽</td>
-            </tr>
-            <tr>
-              <td>Налоги и страховые взносы</td>
-              <td>0 ₽</td>
-            </tr>
-            <tr>
-              <td>Справочно-правовые системы</td>
-              <td>0 ₽</td>
-            </tr>
-            <tr>
-              <td>Повышение квалификации</td>
-              <td>0 ₽</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="profit-container">
+          <table>
+            <caption>Расходы на юридический аутсорсинг от КМК</caption>
+            <tbody>
+              <tr>
+                <td>Абонентское обслуживание</td>
+                <td>25 000 ₽</td>
+              </tr>
+              <tr>
+                <td>Налоги и страховые взносы</td>
+                <td>0 ₽</td>
+              </tr>
+              <tr>
+                <td>Справочно-правовые системы</td>
+                <td>0 ₽</td>
+              </tr>
+              <tr>
+                <td>Повышение квалификации</td>
+                <td>0 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <caption>Расходы на штатного юриста</caption>
+            <tbody>
+              <tr>
+                <td>Абонентское обслуживание</td>
+                <td>25 000 ₽</td>
+              </tr>
+              <tr>
+                <td>Налоги и страховые взносы</td>
+                <td>0 ₽</td>
+              </tr>
+              <tr>
+                <td>Справочно-правовые системы</td>
+                <td>0 ₽</td>
+              </tr>
+              <tr>
+                <td>Повышение квалификации</td>
+                <td>0 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form action="javascript:void(0);">
+          <input type="tel" placeholder="Введите номер телефона*" required>
+          <button>ОТПРАВИТЬ</button>
+        </form>
       </section>
     </div>
 
-    <div>
-      <section>
+    <div class="specializations-wrapper">
+      <section class="specializations-inner">
         <h2>Специализации нашей компании</h2>
       </section>
     </div>
 
-    <div>
-      <!-- <section>
-        <h2 class="header-ico header-color mb25">Наши юристы постоянные спикеры:</h2>
-        <ul class="media-list">
+    <div class="speakers-wrapper">
+      <section class="speakers-inner">
+        <h2>Наши юристы постоянные спикеры</h2>
+        <ul class="speakers-list">
           <li>
-            <img class="media-img" src="https://www.kmklaw.ru/upload/medialibrary/0a5/1st-channel.png"
-              alt="Первый канал">
+            <img src="img/1st-channel.min.webp" alt="Первый канал">
           </li>
           <li>
-            <img class="media-img" src="https://www.kmklaw.ru/upload/medialibrary/2ce/ria.png" alt="РИА Новости">
+            <img src="img/ria.min.webp" alt="РИА Новости">
           </li>
           <li>
-            <img class="media-img" src="https://www.kmklaw.ru/upload/medialibrary/5dd/360.png" alt="360 Подмосковье">
+            <img src="img/360.min.webp" alt="360 Подмосковье">
           </li>
           <li>
-            <img class="media-img" src="https://www.kmklaw.ru/upload/medialibrary/f17/regnum.png" alt="ИА Регнум">
+            <img src="img/regnum.min.webp" alt="ИА Регнум">
           </li>
           <li>
-            <img class="media-img" src="https://www.kmklaw.ru/upload/medialibrary/f8e/tellmsc.png"
-              alt="Радио Говорит Москва 94.8fm">
+            <img src="img/tellmsc.min.webp" alt="Радио Говорит Москва 94.8fm">
           </li>
         </ul>
-      </section> -->
+      </section>
     </div>
 
-    <div>
-      <section>
+    <div class="works-wrapper">
+      <section class="works-inner">
         <h2>Как мы работаем</h2>
-        <ul>
+        <ul class="works-list">
           <li>
-            <img src="">
+            <div class="round">1</div>
             <h3>Оставляете заявку</h3>
             <p>Связываемся с вами для уточнения всех деталей. Анализируем ситуацию. Назначаем юриста или команду юристов
               с необходимыми специализациями.</p>

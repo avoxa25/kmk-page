@@ -52,7 +52,9 @@ H2 {
 @mixin wrapper {
   display: flex;
   justify-content: center;
+
   width: 100%;
+  min-width: 320px;
 }
 
 @mixin inner {
@@ -60,7 +62,7 @@ H2 {
   min-width: 320px;
   max-width: 1100px;
 
-  padding: 40px 20px;
+  padding: 40px;
 }
 
 @mixin icon {
@@ -543,7 +545,9 @@ H2 {
 
     button {
       @include standardButton;
-      width: 400px;
+
+      width: 100%;
+      max-width: 400px;
 
       margin-top: 20px;
       padding: 0 20px;
@@ -551,8 +555,116 @@ H2 {
 
     p {
       width: 50%;
+      min-width: 200px;
     }
   }
 }
 
-//
+// PROFIT
+
+.profit {
+  &-wrapper {
+    @include wrapper;
+  }
+
+  &-inner {
+    @include inner;
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      width: 50%;
+      min-width: 280px;
+      height: 40px;
+
+      margin: 0 10px 10px 0;
+
+      border: none;
+      border-bottom: 1px solid gray;
+    }
+
+    button {
+      @include standardButton;
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    table {
+      width: 50%;
+      min-width: 320px;
+
+      margin-top: 10px;
+
+      caption {
+        font-weight: 600;
+      }
+      
+      tr {
+        td {
+          padding: 10px;
+        }
+        td:last-of-type {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+// SPECIALIZATION
+
+.specializations {
+  &-wrapper {
+    @include wrapper;
+
+    background-color: #e7e7e7;
+  }
+
+  &-inner {
+    @include inner;
+  }
+}
+
+// SPEAKERS
+
+.speakers {
+  &-wrapper {
+    @include wrapper;
+  }
+
+  &-inner {
+    @include inner;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &>li {
+      width: 20%;
+      min-width: 280px;
+
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// WORKS
