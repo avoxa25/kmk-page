@@ -6,54 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link rel="stylesheet" href="styles.min.css">
 </head>
 
 <body>
-  <header>
-    <h1>КМК: Юридический аутсорсинг, абонентское юридическое обслуживание</h1>
-    <div>
+  <header class="header-wrapper">
+    <section class="header-inner">
+      <h1 class="visually-hidden">КМК: Юридический аутсорсинг, абонентское юридическое обслуживание</h1>
       <a href="">
-        <img src="">
+        <img src="img/kmk-logo-w.min.webp" alt="Компания КМК" width="85px" height="30px">
       </a>
 
-      <nav>
-        <ul>
+      <nav class="menu-container">
+        <ul class="menu">
           <li>
-            <a href="">1</a>
+            <a href="">Ссылка 1</a>
           </li>
           <li>
-            <a href="">2</a>
+            <a href="">Ссылка 2</a>
           </li>
           <li>
-            <a href="">3</a>
+            <a href="">Ссылка 3</a>
+          </li>
+          <li>
+            <a href="">Ссылка 4</a>
+          </li>
+          <li>
+            <a href="">Ссылка 5</a>
           </li>
         </ul>
       </nav>
 
-      <p>
-        <span>71231231213</span>
-        <span>mail@mail.ru</span>
-      </p>
-    </div>
+      <div class="contacts">
+        <a href="call:213123">71231231213</a>
+        <a href="mail:sadsd@asdasd.ru">mail@mail.ru</a>
+      </div>
+    </section>
   </header>
 
   <main>
-    <div>
-      <section>
-        <div>
+    <div class="service-wrapper">
+      <section class="service-inner">
+        <div class="service-group">
           <h2>Абонентское юридическое обслуживание</h2>
-            <ul>
-              <li>Круглосуточная юридическая помощь</li>
-              <li>Защита ваших интересов</li>
-              <li>92 % выигранных дел</li>
-              <li>Защита ваших активов</li>
-            </ul>
-            <p>
-              В тариф "5+5+5" входит все самое необходимое для бизнеса:
-              5 юридических консультаций + 5 проверок договоров + 5 составлений договоров
-          </p>
+          <ul class="service-list">
+            <li>Круглосуточная юридическая помощь</li>
+            <li>Защита ваших интересов</li>
+            <li>92 % выигранных дел</li>
+            <li>Защита ваших активов</li>
+          </ul>
         </div>
-        <form>
+        <form class="contact-us">
+          <p>Отправьте заявку</p>
           <label for="clientName">Имя*:</label>
           <input id="clientName" type="text" placeholder="Введите Ваше имя" required>
           <label for="clientPhone">Телефон*:</label>
@@ -101,160 +106,160 @@
     </div>
 
     <div>
-    <section>
-      <h2>Оставить заявку</h2>
-      <p>
-        Оставьте заявку на консультацию, заполните форму ниже и получите дополнительную скидку
-        на годовое абонентское юридическое обслуживание
-      </p>
-      <button type="button">ОСТАВИТЬ ЗАЯВКУ</button>
-    </section>
+      <section>
+        <h2>Оставить заявку</h2>
+        <p>
+          Оставьте заявку на консультацию, заполните форму ниже и получите дополнительную скидку
+          на годовое абонентское юридическое обслуживание
+        </p>
+        <button type="button">ОСТАВИТЬ ЗАЯВКУ</button>
+      </section>
     </div>
 
     <div>
-    <section>
-      <h2>Тарифы на юридический аутсорсинг</h2>
-      <table class="price-table">
-        <caption>Тарифы на юридический аутсорсинг</caption>
-        <thead>
-          <tr>
-            <th scope="col" class="header standard">
-              Базовый
-            </th>
-            <th scope="col" class="header pro">
-              Стандартный
-            </th>
-            <th scope="col" class="header premium">
-              Индивидуальный
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Включено 20 часов
-            </td>
-            <td>
-              Включено 40 часов
-            </td>
-            <td rowspan="11">
-              Объем и вид услуг обсуждаются индивидуально
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Договорная работа
-            </td>
-            <td>
-              Договорная работа
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Претензионная работа
-            </td>
-            <td>
-              Претензионная работа
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Судебная работа<br>
-              (до 1 суда одновременно)
-            </td>
-            <td>
-              Судебная работа<br>
-              (до 2 суда одновременно)
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Кадровое производство<br>
-              (до 2 документов)
-            </td>
-            <td>
-              Кадровое производство<br>
-              (до 4 документов)
-            </td>
-          </tr>
-          <tr>
-            <td class="non-available">
-              Правовое консультирование
-            </td>
-            <td class="available">
-              Правовое консультирование
-            </td>
-          </tr>
-          <tr>
-            <td class="non-available">
-              Выезды в госорганы или на переговоры
-            </td>
-            <td class="available">
-              Выезды в госорганы или на переговоры<br>
-              (до 3 раз)
-            </td>
-          </tr>
-          <tr>
-            <td class="non-available">
-              Регистрационные услуги<br>
-              (изменения в ЕГРЮЛ)
-            </td>
-            <td class="available">
-              Регистрационные услуги<br>
-              (изменения в ЕГРЮЛ)
-            </td>
-          </tr>
-          <tr>
-            <td class="non-available">
-              Документы проверяет лично партнер фирмы
-            </td>
-            <td class="available">
-              Документы проверяет лично партнер фирмы
-            </td>
-          </tr>
-          <tr>
-            <td class="non-available">
-              Консультирование в нерабочее время и выходные дни
-            </td>
-            <td class="available">
-              Консультирование в нерабочее время и выходные дни
-            </td>
-          </tr>
-          <tr>
-            <td class="non-available">
-              Помощь в личных вопросах директору/владельцу
-            </td>
-            <td class="available">
-              Помощь в личных вопросах директору/владельцу
-            </td>
-          </tr>
-          <tr>
-            <td class="grey">
-              от 39 500 руб./месяц
-            </td>
-            <td class="grey">
-              69 500 руб./месяц
-            </td>
-            <td class="grey">
-              Цена рассчитывается индивидуально
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <section>
+        <h2>Тарифы на юридический аутсорсинг</h2>
+        <table class="price-table">
+          <caption>Тарифы на юридический аутсорсинг</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="header standard">
+                Базовый
+              </th>
+              <th scope="col" class="header pro">
+                Стандартный
+              </th>
+              <th scope="col" class="header premium">
+                Индивидуальный
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Включено 20 часов
+              </td>
+              <td>
+                Включено 40 часов
+              </td>
+              <td rowspan="11">
+                Объем и вид услуг обсуждаются индивидуально
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Договорная работа
+              </td>
+              <td>
+                Договорная работа
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Претензионная работа
+              </td>
+              <td>
+                Претензионная работа
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Судебная работа<br>
+                (до 1 суда одновременно)
+              </td>
+              <td>
+                Судебная работа<br>
+                (до 2 суда одновременно)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Кадровое производство<br>
+                (до 2 документов)
+              </td>
+              <td>
+                Кадровое производство<br>
+                (до 4 документов)
+              </td>
+            </tr>
+            <tr>
+              <td class="non-available">
+                Правовое консультирование
+              </td>
+              <td class="available">
+                Правовое консультирование
+              </td>
+            </tr>
+            <tr>
+              <td class="non-available">
+                Выезды в госорганы или на переговоры
+              </td>
+              <td class="available">
+                Выезды в госорганы или на переговоры<br>
+                (до 3 раз)
+              </td>
+            </tr>
+            <tr>
+              <td class="non-available">
+                Регистрационные услуги<br>
+                (изменения в ЕГРЮЛ)
+              </td>
+              <td class="available">
+                Регистрационные услуги<br>
+                (изменения в ЕГРЮЛ)
+              </td>
+            </tr>
+            <tr>
+              <td class="non-available">
+                Документы проверяет лично партнер фирмы
+              </td>
+              <td class="available">
+                Документы проверяет лично партнер фирмы
+              </td>
+            </tr>
+            <tr>
+              <td class="non-available">
+                Консультирование в нерабочее время и выходные дни
+              </td>
+              <td class="available">
+                Консультирование в нерабочее время и выходные дни
+              </td>
+            </tr>
+            <tr>
+              <td class="non-available">
+                Помощь в личных вопросах директору/владельцу
+              </td>
+              <td class="available">
+                Помощь в личных вопросах директору/владельцу
+              </td>
+            </tr>
+            <tr>
+              <td class="grey">
+                от 39 500 руб./месяц
+              </td>
+              <td class="grey">
+                69 500 руб./месяц
+              </td>
+              <td class="grey">
+                Цена рассчитывается индивидуально
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </div>
 
     <div>
-    <section>
-      <h2>Собрать свой тариф</h2>
-      <button id="buttonPopup">Собрать свой тариф</button>
-      <p>
-        Не подошел ни один тариф под ключ?
-        Соберем индивидуальный пакет под ваши задачи
-      </p>
-    </section>
+      <section>
+        <h2>Собрать свой тариф</h2>
+        <button id="buttonPopup">Собрать свой тариф</button>
+        <p>
+          Не подошел ни один тариф под ключ?
+          Соберем индивидуальный пакет под ваши задачи
+        </p>
+      </section>
     </div>
-    
+
     <div>
       <section>
         <h2>
