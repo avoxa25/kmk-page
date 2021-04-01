@@ -725,6 +725,55 @@ H2 {
   }
 }
 
+.owl-carousel.cases {
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    min-width: 280px;
+
+    .request,
+    .decision {
+      position: relative;
+      width: 49%;
+      min-width: 280px;
+
+      padding: 40px 20px 20px 20px;
+
+      border: 1px solid red;
+
+
+      &::before {
+        content: "Суть дела:";
+
+        position: absolute;
+        top: 5px;
+
+        color: red;
+        font-weight: 600;
+      }
+    }
+
+    .request {
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .decision {
+      border-color: green;
+      border-top: none;
+      border-left: none;
+
+      &::before {
+        content: "Решение:";
+
+        color: green;
+      }
+    }
+  }
+}
+
 // REVIEWS
 
 .reviews {
