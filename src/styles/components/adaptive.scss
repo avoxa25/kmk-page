@@ -1,0 +1,143 @@
+// -- MOBILE L 425px --
+
+@media (max-width: 425px) {
+  // HEADER
+
+  .header-inner,
+  .service-inner,
+  .defended-inner,
+  .advantages-inner,
+  .request-inner,
+  .tariffs-inner,
+  .config-inner,
+  .profit-inner,
+  .specializations-inner,
+  .speakers-inner,
+  .works-inner,
+  .cases-inner,
+  .reviews-inner,
+  .contacts-inner,
+  .footer-inner,
+  .popup-inner {
+    padding: 20px;
+  }
+
+  .contacts-list {
+    display: none;
+  }
+
+  // MENU
+
+  @keyframes translate {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(320px); }
+  }
+
+  .menu {
+    &-container {
+      position: absolute;
+      top: 0;
+      left: -320px;
+
+      display: none;
+
+      width: 80%;
+      max-width: 360px;
+
+      padding: 20px;
+
+      background-color: #e7e7e7;
+      box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6);
+      transition: transform .25s ease-in-out;
+
+      a {
+        color: black;
+        font-weight: 600;
+        font-size: 18px;
+
+        &:hover,
+        &:focus {
+          color: red;
+        }
+      }
+    }
+
+    &-list {
+      display: block;
+
+      &>li {
+        margin-top: 25px;
+      }
+
+      &>li:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &-open {
+      display: block;
+
+      &.active+.menu-container {
+        display: block;
+        transform: translateX(320px);
+        
+        animation: translate .25s ease-in-out;
+      }
+    }
+  }
+
+  // DEFENDED
+
+  .defended-statistic .text-large {
+    font-size: 40px;
+  }
+
+  // TABLE
+  .tariffs-inner .tariffs-table {
+    font-weight: 600;
+    word-break: break-word;
+
+    border-collapse: collapse;
+    .header {
+      font-size: 14px;
+    }
+
+    td {
+      font-size: 10px;
+    }
+
+    .grey {
+      font-size: 14px;
+    }
+
+    .pro {
+      border-right: 2px solid white;
+    }
+  }
+}
+
+// -- MOBILE M 375px --
+
+@media (max-width: 375px) {
+  // DEFENDED
+
+  .defended-statistic .text-large {
+    font-size: 34px;
+  }
+}
+
+// -- MOBILE S 320px --
+
+@media (max-width: 320px) {
+  // DEFENDED
+
+  .defended-statistic .text-large {
+    font-size: 30px;
+  }
+
+  // ADVANTAGES
+
+  .advantages-inner {
+    padding-top: 0;
+  }
+}

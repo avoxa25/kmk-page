@@ -12,11 +12,11 @@ class Popup {
         this.closeElement.addEventListener(`click`, () => this.HidePopup());
     }
 
-    public ShowPopup() {
+    public ShowPopup(): void {
         this.wrapperElement.hidden = false;
     }
 
-    public HidePopup() {
+    public HidePopup(): void {
         this.wrapperElement.hidden = true;
     }
 }
