@@ -137,14 +137,33 @@ H2 {
   }
 }
 
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
+.contacts-list {
+  &>li {
+    position: relative;
+  }
 
-  width: 25%;
+  &>li:first-of-type {
+    margin-bottom: 5px;
+  }
 
-  a:first-of-type {
-    margin-right: 10px;
+  .phone::before {
+    @include icon;
+    left: -20px;
+
+    width: 15px;
+    height: 100%;
+
+    background-image: url("img/phone.min.svg");
+  }
+
+  .mail::before {
+    @include icon;
+    left: -20px;
+
+    width: 15px;
+    height: 100%;
+
+    background-image: url("img/mail.min.svg");
   }
 }
 
@@ -369,148 +388,101 @@ H2 {
 
     // TABLE GIVEN BY CLIENT
 
-    .columns {
-      float: left;
-      width: 33.3%;
-      padding: 8px;
-    }
-
-    .price-table {
+    .tariffs-table {
       width: 100%;
 
       border-collapse: separate;
 
       border-spacing: 10px 0;
-    }
 
-    .price-table tr {
-      border: 1px solid #eee;
-      -webkit-transition: 0.3s;
-      transition: 0.3s;
-    }
-
-    table .header {
-      background-color: #111;
-      color: white;
-      font-size: 25px !important;
-      font-weight: 400;
-    }
-
-    .price li,
-    .price-table th,
-    .price-table td {
-      padding: 10px;
-
-      border: 1px solid #eee;
-
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .price-table .grey {
-      background-color: #eee;
-      font-size: 20px !important;
-    }
-
-    .button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 10px 25px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .standard {
-      background-color: white !important;
-
-      border: 2px solid red !important;
-      color: red !important;
-    }
-
-    .pro {
-      background-color: red !important;
-
-      border: 2px solid red !important;
-      color: white !important;
-    }
-
-    .premium {
-      background-color: red !important;
-
-      border: 2px solid white !important;
-      color: white !important;
-    }
-
-    .non-available {
-      background-color: red;
-
-      border: 1px solid white;
-
-      color: white;
-    }
-
-    .available {
-      background-color: green;
-
-      border: 1px solid white;
-
-      color: white;
-    }
-
-    .li-big {
-      height: 690px;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .columns {
-        width: 100%;
-      }
-    }
-
-    .columns {
-      margin-bottom: 40px;
-    }
-
-    p.call span {
-      font-size: 30px;
-    }
-
-    .contact-us {
-      width: 100%;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .margin {
-      margin: 25px 0 50px 0;
-    }
-
-    @media (max-width: 425px) {
-      .price-table {
-        border-collapse: collapse !important;
-
-        word-break: break-word;
+      tr {
+        border: 1px solid #eee;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
       }
 
-      .price-table thead th {
-        font-size: 14px !important;
+      th,
+      td {
+        padding: 10px;
+
+        border: 1px solid #eee;
+
+        font-size: 16px;
+        text-align: center;
       }
 
-      .price-table td {
-        font-size: 10px;
+      .header {
+        background-color: #111;
+        color: white;
+        font-size: 25px !important;
+        font-weight: 400;
       }
 
-      .price-table .grey {
-        font-size: 14px !important;
+      .grey {
+        background-color: #eee;
+        font-size: 20px;
+      }
+
+      .standard {
+        background-color: white !important;
+
+        border: 2px solid red !important;
+        color: red !important;
       }
 
       .pro {
-        border-right: 2px solid white !important;
+        background-color: red !important;
+
+        border: 2px solid red !important;
+        color: white !important;
+      }
+
+      .premium {
+        background-color: red !important;
+
+        border: 2px solid white !important;
+        color: white !important;
+      }
+
+      .non-available {
+        background-color: red;
+
+        border: 1px solid white;
+
+        color: white;
+      }
+
+      .available {
+        background-color: green;
+
+        border: 1px solid white;
+
+        color: white;
+      }
+
+    }
+
+    @media (max-width: 425px) {
+      .tariffs-table {
+        border-collapse: collapse !important;
+
+        word-break: break-word;
+
+        thead th {
+          font-size: 14px !important;
+        }
+
+        .td {
+          font-size: 10px;
+        }
+
+        .grey {
+          font-size: 14px !important;
+        }
+
+        .pro {
+          border-right: 2px solid white !important;
+        }
       }
     }
 
@@ -784,7 +756,7 @@ H2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     div {
       width: 50%;
       min-width: 280px;
