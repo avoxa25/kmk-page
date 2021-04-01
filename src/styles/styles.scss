@@ -794,6 +794,13 @@ H2 {
       .phones-list>li {
         margin-bottom: 10px;
       }
+
+      button {
+        @include standardButton;
+        width: 100%;
+
+        margin-top: 40px;
+      }
     }
   }
 }

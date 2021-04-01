@@ -17,7 +17,7 @@ const webp = require('gulp-webp');
 const wp = require('webpack-stream');
 
 const entryPoints = {};
-entryPoints['main'] = path.resolve(__dirname, 'src/scripts', 'main.ts');
+entryPoints['bundle'] = path.resolve(__dirname, 'src/scripts', 'bundle.ts');
 
 const uglify = require('gulp-uglify');
 
@@ -68,7 +68,7 @@ const towebp = () => {
 }
 
 exports.webpack = webpack = () => {
-  return gulp.src('src/scripts/*.ts')
+  return gulp.src('src/scripts/bundle.ts')
     .pipe(wp({
       mode: 'production',
       entry: entryPoints,
