@@ -1,3 +1,1 @@
-window.onload = () => {
-    console.log(`Hello!2`)
-}
+import './popup';
