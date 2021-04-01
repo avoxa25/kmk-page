@@ -13,11 +13,6 @@ reviews.owlCarousel({ loop: !0,
             items: 3 }
          }});
 
-reviews.on("mousewheel", ".owl-stage", function (e)
-{ 
-    0 < e.deltaY ? owl.trigger("next.owl") : owl.trigger("prev.owl"), e.preventDefault()
-});
-
 const cases = $("#cases"); 
 
 cases.owlCarousel({

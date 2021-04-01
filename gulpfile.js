@@ -24,7 +24,7 @@ const uglify = require('gulp-uglify');
 const sync = require('browser-sync').create();
 
 exports.styles = styles = () => {
-  return gulp.src('src/**/*.scss')
+  return gulp.src('src/styles/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -93,7 +93,7 @@ exports.webpack = webpack = () => {
 }
 
 exports.jsmin = jsmin = () => {
-  return gulp.src('src/**/*.js')
+  return gulp.src('src/scripts/*.js')
     .pipe(uglify())
     .pipe(rename((p) => {
       p.dirname = '';
@@ -104,7 +104,7 @@ exports.jsmin = jsmin = () => {
 }
 
 exports.html = html = () => {
-  return gulp.src('src/**/*.html')
+  return gulp.src('src/markup/*.html')
     .pipe(rename((p) => {
       p.dirname = '';
     }))
@@ -125,10 +125,10 @@ const browsersync = (start) => {
 }
 
 const watcher = () => {
-  gulp.watch('src/**/*.html', gulp.series('html'));
-  gulp.watch('src/**/*.scss', gulp.series('styles'));
-  gulp.watch('src/**/*.ts', gulp.series('webpack'));
-  gulp.watch('src/**/*.js', gulp.series('jsmin'));;
+  gulp.watch('src/markup/*.html', gulp.series('html'));
+  gulp.watch('src/styles/**/*.scss', gulp.series('styles'));
+  gulp.watch('src/scripts/*.ts', gulp.series('webpack'));
+  gulp.watch('src/scripts/*.js', gulp.series('jsmin'));;
 }
 
 exports.images = series(imgmin, movesvg, towebp);

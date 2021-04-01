@@ -1,0 +1,92 @@
+// -- MOBILE L 425px --
+
+@media (max-width: 425px) {
+  // HEADER
+
+  .header-inner,
+  .service-inner,
+  .defended-inner,
+  .advantages-inner,
+  .request-inner,
+  .tariffs-inner,
+  .config-inner,
+  .profit-inner,
+  .specializations-inner,
+  .speakers-inner,
+  .works-inner,
+  .cases-inner,
+  .reviews-inner,
+  .contacts-inner,
+  .footer-inner,
+  .popup-inner {
+    padding: 20px;
+  }
+
+  .contacts-list {
+    display: none;
+  }
+
+  .menu-container {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  // DEFENDED
+
+  .defended-statistic .text-large {
+    font-size: 40px;
+  }
+
+  // TABLE
+  .tariffs-inner .tariffs-table {
+    border-collapse: collapse;
+
+    font-weight: 600;
+    word-break: break-word;
+
+    .header {
+      font-size: 14px;
+    }
+
+    td {
+      font-size: 10px;
+    }
+
+    .grey {
+      font-size: 14px;
+    }
+
+    .pro {
+      border-right: 2px solid white;
+    }
+  }
+}
+
+// -- MOBILE M 375px --
+
+@media (max-width: 375px) {
+  // DEFENDED
+
+  .defended-statistic .text-large {
+    font-size: 34px;
+  }
+}
+
+// -- MOBILE S 320px --
+
+@media (max-width: 320px) {
+  // DEFENDED
+
+  .defended-statistic .text-large {
+    font-size: 30px;
+  }
+
+  // ADVANTAGES
+
+  .advantages-inner {
+    padding-top: 0;
+  }
+}

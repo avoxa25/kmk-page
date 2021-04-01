@@ -172,6 +172,46 @@ H2 {
 }
 
 .menu {
+  &-container {
+    width: 50%;
+  }
+
+  &-mobile {
+    display: none;
+
+    .menu-open {
+      position: relative;
+
+      width: 30px;
+      height: 5px;
+
+      background-color: black;
+      border: 0;
+      outline: none;
+
+      transition: transform .25s ease-in-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: 12px;
+
+        width: 5px;
+        height: 30px;
+
+        background-color: black;
+
+      }
+
+      &.active {
+        transform: rotateZ(45deg);
+      }
+    }
+  }
+}
+
+.menu-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -183,10 +223,6 @@ H2 {
     &:last-of-type {
       margin-right: 0;
     }
-  }
-
-  &-container {
-    width: 50%;
   }
 }
 
@@ -309,7 +345,7 @@ H2 {
 
   &-container {
     width: 45%;
-    min-width: 320px;
+    min-width: 280px;
   }
 
   &-list {
@@ -419,10 +455,10 @@ H2 {
       }
 
       .header {
-        background-color: #111;
         color: white;
         font-size: 25px;
         font-weight: 400;
+        background-color: #111;
       }
 
       .grey {
@@ -467,30 +503,6 @@ H2 {
         color: white;
       }
 
-    }
-
-    @media (max-width: 425px) {
-      .tariffs-table {
-        border-collapse: collapse;
-
-        word-break: break-word;
-
-        .header {
-          font-size: 14px;
-        }
-
-        td {
-          font-size: 10px;
-        }
-
-        .grey {
-          font-size: 14px;
-        }
-
-        .pro {
-          border-right: 2px solid white;
-        }
-      }
     }
 
     // END OF TABLE GIVEN BY CLIENT
@@ -907,3 +919,5 @@ H2 {
     }
   }
 }
+
+@import "./components/adaptive";
