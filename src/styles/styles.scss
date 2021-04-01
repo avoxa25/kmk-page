@@ -1,155 +1,7 @@
-// MIXINS
 
-@mixin wrapper {
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
-  min-width: 320px;
-}
-
-@mixin inner {
-  width: 100%;
-  min-width: 320px;
-  max-width: 1100px;
-
-  padding: 40px;
-}
-
-@mixin icon {
-  content: "";
-
-  position: absolute;
-  left: -55px;
-
-  width: 40px;
-  height: 40px;
-
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-@mixin standardButton {
-  height: 40px;
-
-  color: white;
-  font-weight: 600;
-
-  border: 0;
-  border-radius: 5px;
-  background-color: red;
-
-  transition: color, background-color 0.5s ease-in-out;
-
-  &:hover,
-  &:focus {
-    color: red;
-
-    background-color: white;
-  }
-}
-
-
-// GLOBAL
-
-[hidden] {
-  display: none !important;
-}
-
-* {
-  box-sizing: border-box;
-
-  font-family: 'Open Sans', sans-serif;
-}
-
-BODY {
-  margin: 0;
-}
-
-P,
-UL {
-  margin: 0;
-  padding: 0;
-}
-
-UL {
-  list-style-type: none;
-}
-
-A {
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px dotted rgba($color: black, $alpha: 0);
-
-  &:hover {
-    border-color: rgba($color: black, $alpha: 1.0);
-  }
-}
-
-H2 {
-  margin-top: 0;
-}
-
-.red {
-  color: red;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.contact-us {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 33%;
-  min-width: 240px;
-
-  margin-bottom: 20px;
-  padding: 20px;
-
-  text-align: left;
-
-  background-color: rgba($color: black, $alpha: 0.3);
-
-  p:first-of-type {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  input,
-  label,
-  button {
-    width: 100%;
-
-    font-size: 14px;
-  }
-
-  input {
-    height: 40px;
-
-    margin-bottom: 10px;
-    padding: 5px;
-
-    color: black;
-
-    border: 0;
-    border-radius: 5px;
-  }
-
-  button {
-    @include standardButton;
-  }
-}
+@import "./components/mixins";
+@import "./components/global";
+@import "./components/palilalia";
 
 //HEADER
 
@@ -239,7 +91,7 @@ H2 {
     width: 15px;
     height: 100%;
 
-    background-image: url("img/phone.min.svg");
+    background-image: url("img/icons/phone.min.svg");
   }
 
   .mail::before {
@@ -249,7 +101,7 @@ H2 {
     width: 15px;
     height: 100%;
 
-    background-image: url("img/mail.min.svg");
+    background-image: url("img/icons/mail.min.svg");
   }
 }
 
@@ -260,7 +112,7 @@ H2 {
     @include wrapper;
 
     background-color: gray;
-    background-image: url("img/header_bg.min.webp");
+    background-image: url("img/header-bg.min.webp");
     background-position: 50% 50%;
     background-size: cover;
   }
@@ -289,7 +141,7 @@ H2 {
 
   &-list {
     text-align: left;
-    list-style: url("img/tick.min.svg") outside;
+    list-style: url("img/icons/tick.min.svg") outside;
   }
 }
 
@@ -359,25 +211,25 @@ H2 {
     .team::before {
       @include icon;
 
-      background-image: url("img/team.min.svg");
+      background-image: url("img/icons/team.min.svg");
     }
 
     .justice::before {
       @include icon;
 
-      background-image: url("img/justice.min.svg");
+      background-image: url("img/icons/justice.min.svg");
     }
 
     .cash::before {
       @include icon;
 
-      background-image: url("img/cash.min.svg");
+      background-image: url("img/icons/cash.min.svg");
     }
 
     .partnership::before {
       @include icon;
 
-      background-image: url("img/partnership.min.svg");
+      background-image: url("img/icons/partnership.min.svg");
     }
   }
 }

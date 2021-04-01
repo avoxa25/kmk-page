@@ -1,0 +1,37 @@
+[hidden] {
+  display: none !important;
+}
+
+* {
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+BODY {
+  margin: 0;
+}
+
+P,
+UL {
+  margin: 0;
+  padding: 0;
+}
+
+UL {
+  list-style-type: none;
+}
+
+A {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba($color: black, $alpha: 0);
+
+  &:hover {
+    border-color: rgba($color: black, $alpha: 1.0);
+  }
+}
+
+H2 {
+  margin-top: 0;
+}
