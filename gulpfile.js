@@ -38,7 +38,7 @@ exports.styles = styles = () => {
       p.extname = '.css';
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/assets/styles'))
     .pipe(sync.stream());
 }
 
@@ -99,7 +99,7 @@ exports.jsmin = jsmin = () => {
       p.dirname = '';
       p.basename += ".min";
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/assets/scripts'))
     .pipe(sync.stream());
 }
 
