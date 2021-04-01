@@ -26,12 +26,64 @@
     display: none;
   }
 
-  .menu-container {
-    display: none;
+  // MENU
+
+  @keyframes translate {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(320px); }
   }
 
-  .menu-mobile {
-    display: block;
+  .menu {
+    &-container {
+      position: absolute;
+      top: 0;
+      left: -320px;
+
+      display: none;
+
+      width: 80%;
+      max-width: 360px;
+
+      padding: 20px;
+
+      background-color: #e7e7e7;
+      box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6);
+      transition: transform .25s ease-in-out;
+
+      a {
+        color: black;
+        font-weight: 600;
+        font-size: 18px;
+
+        &:hover,
+        &:focus {
+          color: red;
+        }
+      }
+    }
+
+    &-list {
+      display: block;
+
+      &>li {
+        margin-top: 25px;
+      }
+
+      &>li:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &-open {
+      display: block;
+
+      &.active+.menu-container {
+        display: block;
+        transform: translateX(320px);
+        
+        animation: translate .25s ease-in-out;
+      }
+    }
   }
 
   // DEFENDED
@@ -42,11 +94,10 @@
 
   // TABLE
   .tariffs-inner .tariffs-table {
-    border-collapse: collapse;
-
     font-weight: 600;
     word-break: break-word;
 
+    border-collapse: collapse;
     .header {
       font-size: 14px;
     }

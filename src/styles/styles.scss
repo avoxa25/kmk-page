@@ -176,55 +176,52 @@ H2 {
     width: 50%;
   }
 
-  &-mobile {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &>li {
+      margin-right: 10px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-open {
+    position: relative;
+
     display: none;
+    width: 30px;
+    height: 5px;
 
-    .menu-open {
-      position: relative;
+    background-color: black;
+    border: 0;
+    outline: none;
 
-      width: 30px;
-      height: 5px;
+    transition: transform .25s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 12px;
+
+      width: 5px;
+      height: 30px;
 
       background-color: black;
-      border: 0;
-      outline: none;
+    }
 
-      transition: transform .25s ease-in-out;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: -12px;
-        left: 12px;
-
-        width: 5px;
-        height: 30px;
-
-        background-color: black;
-
-      }
-
-      &.active {
-        transform: rotateZ(45deg);
-      }
+    &.active {
+      transform: rotateZ(45deg);
     }
   }
 }
 
-.menu-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-  &>li {
-    margin-right: 10px;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-}
 
 .contacts-list {
   &>li {
