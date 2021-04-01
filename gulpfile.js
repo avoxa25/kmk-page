@@ -93,8 +93,7 @@ exports.webpack = webpack = () => {
 }
 
 exports.jsmin = jsmin = () => {
-  return gulp.src('src/**/*.js', { read: true })
-    .pipe(clean())
+  return gulp.src('src/**/*.js')
     .pipe(uglify())
     .pipe(rename((p) => {
       p.dirname = '';
@@ -129,7 +128,7 @@ const watcher = () => {
   gulp.watch('src/**/*.html', gulp.series('html'));
   gulp.watch('src/**/*.scss', gulp.series('styles'));
   gulp.watch('src/**/*.ts', gulp.series('webpack'));
-  gulp.watch('src/**/*.js', gulp.series('jsmin'));
+  gulp.watch('src/**/*.js', gulp.series('jsmin'));;
 }
 
 exports.images = series(imgmin, movesvg, towebp);
