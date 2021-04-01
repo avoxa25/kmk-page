@@ -1,2 +1,2 @@
-import './popup';
-import './mobile-menu';
+import './components/popup';
+import './components/mobile-menu';

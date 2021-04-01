@@ -127,7 +127,7 @@ const browsersync = (start) => {
 const watcher = () => {
   gulp.watch('src/markup/*.html', gulp.series('html'));
   gulp.watch('src/styles/**/*.scss', gulp.series('styles'));
-  gulp.watch('src/scripts/*.ts', gulp.series('webpack'));
+  gulp.watch('src/scripts/**/*.ts', gulp.series('webpack'));
   gulp.watch('src/scripts/*.js', gulp.series('jsmin'));;
 }
 
