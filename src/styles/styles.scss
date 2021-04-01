@@ -414,7 +414,7 @@ H2 {
       .header {
         background-color: #111;
         color: white;
-        font-size: 25px !important;
+        font-size: 25px;
         font-weight: 400;
       }
 
@@ -424,24 +424,24 @@ H2 {
       }
 
       .standard {
-        background-color: white !important;
+        background-color: white;
 
-        border: 2px solid red !important;
-        color: red !important;
+        border: 2px solid red;
+        color: red;
       }
 
       .pro {
-        background-color: red !important;
+        background-color: red;
 
-        border: 2px solid red !important;
-        color: white !important;
+        border: 2px solid red;
+        color: white;
       }
 
       .premium {
-        background-color: red !important;
+        background-color: red;
 
-        border: 2px solid white !important;
-        color: white !important;
+        border: 2px solid white;
+        color: white;
       }
 
       .non-available {
@@ -464,24 +464,24 @@ H2 {
 
     @media (max-width: 425px) {
       .tariffs-table {
-        border-collapse: collapse !important;
+        border-collapse: collapse;
 
         word-break: break-word;
 
-        thead th {
-          font-size: 14px !important;
+        .header {
+          font-size: 14px;
         }
 
-        .td {
+        td {
           font-size: 10px;
         }
 
         .grey {
-          font-size: 14px !important;
+          font-size: 14px;
         }
 
         .pro {
-          border-right: 2px solid white !important;
+          border-right: 2px solid white;
         }
       }
     }
