@@ -43,7 +43,7 @@ exports.styles = styles = () => {
 }
 
 const imgmin = () => {
-  return gulp.src('src/img/*.*')
+  return gulp.src('src/img/**/*.*')
     .pipe(imagemin())
     .pipe(rename((p) => {
       p.basename += ".min"
@@ -53,13 +53,13 @@ const imgmin = () => {
 }
 
 const movesvg = () => {
-  return gulp.src('src/img/*.min.svg', { read: true })
+  return gulp.src('src/img/**/*.min.svg', { read: true })
     .pipe(clean())
     .pipe(gulp.dest('dist/img'));
 }
 
 const towebp = () => {
-  return gulp.src('src/img/*.min.{jpg,png}', { read: true })
+  return gulp.src('src/img/**/*.min.{jpg,png}', { read: true })
     .pipe(clean())
     .pipe(webp({
       quality: 75

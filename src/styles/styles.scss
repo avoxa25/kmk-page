@@ -91,7 +91,7 @@
     width: 15px;
     height: 100%;
 
-    background-image: url("img/phone.min.svg");
+    background-image: url("img/icons/phone.min.svg");
   }
 
   .mail::before {
@@ -101,7 +101,7 @@
     width: 15px;
     height: 100%;
 
-    background-image: url("img/mail.min.svg");
+    background-image: url("img/icons/mail.min.svg");
   }
 }
 
@@ -112,7 +112,7 @@
     @include wrapper;
 
     background-color: gray;
-    background-image: url("img/header_bg.min.webp");
+    background-image: url("img/header-bg.min.webp");
     background-position: 50% 50%;
     background-size: cover;
   }
@@ -141,7 +141,7 @@
 
   &-list {
     text-align: left;
-    list-style: url("img/tick.min.svg") outside;
+    list-style: url("img/icons/tick.min.svg") outside;
   }
 }
 
@@ -211,25 +211,25 @@
     .team::before {
       @include icon;
 
-      background-image: url("img/team.min.svg");
+      background-image: url("img/icons/team.min.svg");
     }
 
     .justice::before {
       @include icon;
 
-      background-image: url("img/justice.min.svg");
+      background-image: url("img/icons/justice.min.svg");
     }
 
     .cash::before {
       @include icon;
 
-      background-image: url("img/cash.min.svg");
+      background-image: url("img/icons/cash.min.svg");
     }
 
     .partnership::before {
       @include icon;
 
-      background-image: url("img/partnership.min.svg");
+      background-image: url("img/icons/partnership.min.svg");
     }
   }
 }
