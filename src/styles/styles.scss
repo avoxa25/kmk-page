@@ -310,83 +310,59 @@
   &-inner {
     @include inner;
 
-    // TABLE GIVEN BY CLIENT
-
     .tariffs-table {
       width: 100%;
-
-      border-collapse: separate;
+      
+      border-collapse: collapse;
 
       border-spacing: 10px 0;
 
       tr {
-        border: 1px solid #eee;
-        -webkit-transition: 0.3s;
+        border: 1px solid rgb(231, 231, 231);
         transition: 0.3s;
       }
 
       th,
       td {
-        padding: 10px;
-
-        border: 1px solid #eee;
+        padding: 15px;
 
         font-size: 16px;
         text-align: center;
+
+        border: 1px solid rgb(231, 231, 231);
       }
 
-      .header {
-        color: white;
-        font-size: 25px;
-        font-weight: 400;
-        background-color: #111;
-      }
-
-      .grey {
-        background-color: #eee;
-        font-size: 20px;
-      }
-
-      .standard {
-        background-color: white;
-
-        border: 2px solid $red;
-        color: $red;
-      }
-
-      .pro {
-        background-color: $red;
-
-        border: 2px solid $red;
-        color: white;
-      }
-
-      .premium {
-        background-color: $red;
-
-        border: 2px solid white;
-        color: white;
-      }
-
-      .non-available {
-        background-color: $red;
-
-        border: 1px solid white;
-
-        color: white;
+      .non-available, .available {
+        background-image: url("../../img/icons/non-available.min.svg");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
       }
 
       .available {
-        background-color: green;
-
-        border: 1px solid white;
-
-        color: white;
+        background-image: url("../../img/icons/available.min.svg");
       }
 
-    }
+      .price {
+        font-size: 16px;
+        color: gray;
+      }
 
-    // END OF TABLE GIVEN BY CLIENT
+      &.mobile {
+        display: none;
+        width: 49%;
+        min-width: 280px;
+      }
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &>table {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -514,6 +490,8 @@
 .speakers {
   &-wrapper {
     @include wrapper;
+
+    background-color: #e7e7e7;
   }
 
   &-inner {

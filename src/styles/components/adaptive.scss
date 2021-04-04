@@ -1,3 +1,21 @@
+// -- TABLET 768px --
+
+@media (max-width: 768px) {
+  .logo-underheader {
+    display: none;
+  }
+
+  .tariffs-inner {
+    .tariffs-table {
+      display: none;
+
+      &.mobile {
+        display: table;
+      }
+    }
+  }
+}
+
 // -- MOBILE L 425px --
 
 @media (max-width: 425px) {
@@ -29,8 +47,13 @@
   // MENU
 
   @keyframes translate {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(320px); }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(320px);
+    }
   }
 
   .menu {
@@ -80,7 +103,7 @@
       &.active+.menu-container {
         display: block;
         transform: translateX(320px);
-        
+
         animation: translate .25s ease-in-out;
       }
     }
@@ -90,29 +113,6 @@
 
   .defended-statistic .text-large {
     font-size: 40px;
-  }
-
-  // TABLE
-  .tariffs-inner .tariffs-table {
-    font-weight: 600;
-    word-break: break-word;
-
-    border-collapse: collapse;
-    .header {
-      font-size: 14px;
-    }
-
-    td {
-      font-size: 10px;
-    }
-
-    .grey {
-      font-size: 14px;
-    }
-
-    .pro {
-      border-right: 2px solid white;
-    }
   }
 }
 
