@@ -2,6 +2,10 @@
   display: none !important;
 }
 
+summary::marker {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
 
