@@ -76,3 +76,15 @@ $red: #6e2622;
 .text-center {
     text-align: center;
 }
+
+a.button {
+    @include standardButton;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35%;
+    min-width: 280px;
+    height: 45px;
+  }

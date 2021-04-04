@@ -2,8 +2,9 @@ const reviews = $("#reviews");
 
 reviews.owlCarousel({ loop: !0,
     nav: !1,
-    center: !0,
+    center: false,
     margin: 20,
+    loop: false,
     responsive:{ 
         0: { 
             items: 1 
@@ -17,6 +18,6 @@ const cases = $("#cases");
 
 cases.owlCarousel({
     margin: 10,
-    loop: true,
+    loop: false,
     items: 1
 });

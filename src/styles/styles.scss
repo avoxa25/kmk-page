@@ -671,18 +671,6 @@
         color: green;
       }
     }
-
-    .button {
-      @include standardButton;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 35%;
-      min-width: 280px;
-      height: 45px;
-    }
   }
 }
 
