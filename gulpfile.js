@@ -52,6 +52,12 @@ const imgmin = () => {
     .pipe(sync.stream());
 }
 
+const moveimg = () => {
+  return gulp.src('src/img/**/*.min.{jpg,png}', { read: true })
+    .pipe(clean())
+    .pipe(gulp.dest('dist/img'));
+}
+
 const movesvg = () => {
   return gulp.src('src/img/**/*.min.svg', { read: true })
     .pipe(clean())
@@ -131,6 +137,6 @@ const watcher = () => {
   gulp.watch('src/scripts/*.js', gulp.series('jsmin'));;
 }
 
-exports.images = series(imgmin, movesvg, towebp);
+exports.images = series(imgmin, moveimg, movesvg);
 exports.default = series(styles, webpack, jsmin, html, browsersync, watcher);
 

@@ -1,4 +1,3 @@
-
 @import "./components/mixins";
 @import "./components/global";
 @import "./components/palilalia";
@@ -20,6 +19,10 @@
     justify-content: space-between;
 
     color: black;
+
+    .logo {
+      color: $red;
+    }
   }
 }
 
@@ -112,7 +115,7 @@
     @include wrapper;
 
     background-color: gray;
-    background-image: url("../../img/header-bg.min.webp");
+    background-image: url("../../img/service-bg.min.png");
     background-position: 50% 50%;
     background-size: cover;
   }
@@ -144,6 +147,10 @@
   &-list {
     text-align: left;
     list-style: url("../../img/icons/tick.min.svg") outside;
+
+    &>li {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -158,10 +165,23 @@
     @include inner;
   }
 
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   &-statistic {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 30%;
+    min-width: 280px;
+
+    margin: 15px 0;
+
+    text-align: center;
 
     .text-large {
       font-size: 52px;
@@ -228,6 +248,12 @@
       background-image: url("../../img/icons/cash.min.svg");
     }
 
+    .time::before {
+      @include icon;
+
+      background-image: url("../../img/icons/time.min.svg");
+    }
+
     .partnership::before {
       @include icon;
 
@@ -255,9 +281,13 @@
     color: white;
     font-size: 24px;
 
-    .image-container {
-      width: 30%;
-      height: 100%;
+    background-image: url("../../img/request-bg.min.png");
+    background-position: 110% 50%;
+    background-repeat: no-repeat;
+    background-size: 66%;
+
+    p {
+      background-color: rgba($color: black, $alpha: 0.5)
     }
 
     button {
@@ -280,83 +310,59 @@
   &-inner {
     @include inner;
 
-    // TABLE GIVEN BY CLIENT
-
     .tariffs-table {
       width: 100%;
-
-      border-collapse: separate;
+      
+      border-collapse: collapse;
 
       border-spacing: 10px 0;
 
       tr {
-        border: 1px solid #eee;
-        -webkit-transition: 0.3s;
+        border: 1px solid rgb(231, 231, 231);
         transition: 0.3s;
       }
 
       th,
       td {
-        padding: 10px;
-
-        border: 1px solid #eee;
+        padding: 15px;
 
         font-size: 16px;
         text-align: center;
+
+        border: 1px solid rgb(231, 231, 231);
       }
 
-      .header {
-        color: white;
-        font-size: 25px;
-        font-weight: 400;
-        background-color: #111;
-      }
-
-      .grey {
-        background-color: #eee;
-        font-size: 20px;
-      }
-
-      .standard {
-        background-color: white;
-
-        border: 2px solid red;
-        color: red;
-      }
-
-      .pro {
-        background-color: red;
-
-        border: 2px solid red;
-        color: white;
-      }
-
-      .premium {
-        background-color: red;
-
-        border: 2px solid white;
-        color: white;
-      }
-
-      .non-available {
-        background-color: red;
-
-        border: 1px solid white;
-
-        color: white;
+      .non-available, .available {
+        background-image: url("../../img/icons/non-available.min.svg");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
       }
 
       .available {
-        background-color: green;
-
-        border: 1px solid white;
-
-        color: white;
+        background-image: url("../../img/icons/available.min.svg");
       }
 
-    }
+      .price {
+        font-size: 16px;
+        color: gray;
+      }
 
-    // END OF TABLE GIVEN BY CLIENT
+      &.mobile {
+        display: none;
+        width: 49%;
+        min-width: 280px;
+      }
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &>table {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -380,7 +386,7 @@
     font-size: 24px;
     text-align: right;
 
-    background-image: url("../../img/config.min.webp");
+    background-image: url("../../img/config.min.png");
     background-position: 5% 50%;
     background-repeat: no-repeat;
     background-size: 45%;
@@ -484,6 +490,8 @@
 .speakers {
   &-wrapper {
     @include wrapper;
+
+    background-color: #e7e7e7;
   }
 
   &-inner {
@@ -560,7 +568,7 @@
       color: white;
       font-size: 50px;
 
-      background-color: red;
+      background-color: $red;
       border-radius: 50px;
 
       &::before {
@@ -574,7 +582,7 @@
         height: 120px;
 
         background-color: rgba($color: black, $alpha: 0);
-        border: 4px dotted red;
+        border: 4px dotted $red;
         border-radius: 65px;
 
         transform: translate(-50%, -50%);
@@ -611,7 +619,7 @@
 
       padding: 40px 20px 20px 20px;
 
-      border: 1px solid red;
+      border: 1px solid $red;
 
 
       &::before {
@@ -620,7 +628,7 @@
         position: absolute;
         top: 5px;
 
-        color: red;
+        color: $red;
         font-weight: 600;
       }
     }
