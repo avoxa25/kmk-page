@@ -6,6 +6,8 @@ class Offer {
     readonly standardElements: NodeListOf<HTMLButtonElement>;
     readonly vipElements: NodeListOf<HTMLButtonElement>;
 
+    readonly inputElement: HTMLInputElement;
+
     constructor() {
         this.offerType = null;
 
@@ -16,6 +18,8 @@ class Offer {
         this.vipElements = document.querySelectorAll(`.vip`)
         ] as Array<NodeListOf<HTMLButtonElement>>;
 
+        this.inputElement = document.querySelector(`#inputOfferType`) as HTMLInputElement;
+
         for (let i = 0; i < elementsArray.length; i++) {
             elementsArray[i].forEach((e) => e.addEventListener(`click`, ()=> this.SetType(e)));
         }
@@ -25,18 +29,22 @@ class Offer {
         switch (element.dataset.type) {
             case (`start`): {
                 this.offerType = 0;
+                this.inputElement.value = `Старт`;
                 break;
             }
             case (`base`): {
                 this.offerType = 1;
+                this.inputElement.value = `Базовый`;
                 break;
             }
             case (`standard`): {
                 this.offerType = 2;
+                this.inputElement.value = `Стандартный`;
                 break;
             }
             case (`vip`):
                 this.offerType = 3;
+                this.inputElement.value = `VIP`;
         }
     }
 

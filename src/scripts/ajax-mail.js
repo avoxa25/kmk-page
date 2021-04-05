@@ -31,7 +31,7 @@ $(document).ready(function() {
 			url: "mail.php",
 			data: th.serialize()
 		}).done(function() {
-			location.reload();
+			console.log("DONE")
 		});
 		return false;
 	});
