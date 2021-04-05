@@ -197,12 +197,13 @@
     font-size: 24px;
 
     background-image: url("../../img/request-bg.min.png");
-    background-position: 110% 50%;
+    background-position: 125% 60%;
     background-repeat: no-repeat;
     background-size: 66%;
 
     p {
-      background-color: rgba($color: black, $alpha: 0.5)
+      width: 50%;
+      min-width: 280px;
     }
 
     button {
