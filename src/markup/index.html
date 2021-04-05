@@ -166,7 +166,7 @@
           Оставьте заявку на консультацию, нажав на кнопку ниже и получите дополнительную скидку на годовое абонентское
           юридическое обслуживание
         </p>
-        <button class="open-popup" type="button">ПОЛУЧИТЬ СКИДКУ</button>
+        <button class="open-popup" type="button" data-popup="popupCallback">ПОЛУЧИТЬ СКИДКУ</button>
       </section>
     </div>
 
@@ -214,16 +214,16 @@
             <tr>
               <td>Выслать предложение</td>
               <td>
-                <button class="open-popup">СТАРТ</button>
+                <button class="open-popup" data-popup="popupOffer">СТАРТ</button>
               </td>
               <td>
-                <button class="open-popup">БАЗОВЫЙ</button>
+                <button class="open-popup" data-popup="popupOffer">БАЗОВЫЙ</button>
               </td>
               <td>
-                <button class="open-popup">СТАНДАРТНЫЙ</button>
+                <button class="open-popup" data-popup="popupOffer">СТАНДАРТНЫЙ</button>
               </td>
               <td>
-                <button class="open-popup">VIP</button>
+                <button class="open-popup" data-popup="popupOffer">VIP</button>
               </td>
             </tr>
           </tbody>
@@ -249,7 +249,7 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="open-popup">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
+                  <button class="open-popup" data-popup="popupOffer">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
                 </td>
               </tr>
             </tbody>
@@ -273,7 +273,7 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="open-popup">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
+                  <button class="open-popup" data-popup="popupOffer">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
                 </td>
               </tr>
             </tbody>
@@ -297,7 +297,7 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="open-popup">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
+                  <button class="open-popup" data-popup="popupOffer">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
                 </td>
               </tr>
             </tbody>
@@ -321,7 +321,7 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="open-popup">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
+                  <button class="open-popup" data-popup="popupOffer">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
                 </td>
               </tr>
             </tbody>
@@ -337,7 +337,7 @@
           Не подошел ни один тариф?
           Соберем индивидуальный пакет под ваши задачи
         </p>
-        <button class="open-popup" id="buttonPopup">СОБРАТЬ ТАРИФ</button>
+        <button class="open-popup" id="buttonPopup" data-popup="popupCallback">СОБРАТЬ ТАРИФ</button>
       </section>
     </div>
 
@@ -786,7 +786,7 @@
             <h3>Адрес:</h3>
             <p>г. Москва, проезд Добролюбова, 3с3,<br>
               метро «Бутырская»</p>
-            <button class="open-popup">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+            <button class="open-popup" data-popup="popupCallback">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
           </div>
         </div>
       </section>
@@ -807,19 +807,29 @@
   </footer>
 
   <div class="popup-wrapper" id="wrapperPopup" hidden>
-    <section class="popup-inner">
-      <h2 class="visually-hidden">Обратная связь</h2>
-      <form class="contact-us" action="javascript:void(0);">
-        <label for="clientNamePopup">Имя:</label>
-        <input id="clientNamePopup" type="text" placeholder="Введите Ваше имя">
-        <label for="clientPhonePopup">Телефон*:</label>
-        <input id="clientPhonePopup" type="tel" placeholder="Введите Ваш телефон" required>
-        <label for="clientCommentPopup">Комментарий:</label>
-        <input id="clientCommentPopup" type="text" placeholder="Введите Ваш комментарий">
-        <button id="sumbitClientPopup">ОТПРАВИТЬ</button>
-      </form>
+    <div class="popup-inner">
       <button class="close" id="closePopup">Закрыть</button>
-    </section>
+      <section class="popup-container" id="popupCallback" hidden>
+        <h2 class="visually-hidden">Обратный звонок</h2>
+        <form class="contact-us" action="javascript:void(0);">
+          <label for="clientNamePopup">Имя:</label>
+          <input id="clientNamePopup" type="text" placeholder="Введите Ваше имя">
+          <label for="clientPhonePopup">Телефон*:</label>
+          <input id="clientPhonePopup" type="tel" placeholder="Введите Ваш телефон" required>
+          <label for="clientCommentPopup">Комментарий:</label>
+          <input id="clientCommentPopup" type="text" placeholder="Введите Ваш комментарий">
+          <button id="submitCallback">ОТПРАВИТЬ</button>
+        </form>
+      </section>
+      <section class="popup-container" id="popupOffer" hidden>
+        <h2 class="visually-hidden">Получить коммерческое предложение</h2>
+        <form class="contact-us" action="javascript:void(0);">
+          <label for="clientMailPopup">Почта*:</label>
+          <input id="clientMailPopup" type="email" placeholder="Введите Вашу почту" required>
+          <button id="submitOffer">ОТПРАВИТЬ</button>
+        </form>
+      </section>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
