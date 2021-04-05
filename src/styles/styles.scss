@@ -349,6 +349,12 @@
         color: gray;
       }
 
+      button {
+        @include standardButton;
+
+        width: 100%;
+      }
+
       &.mobile {
         display: none;
         width: 49%;
