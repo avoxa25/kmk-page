@@ -390,10 +390,10 @@
     font-size: 24px;
     text-align: right;
 
-    background-image: url("../../img/config.min.png");
-    background-position: 5% 50%;
+    background-image: url("../../img/config.min.svg");
+    background-position: -20% 50%;
     background-repeat: no-repeat;
-    background-size: 45%;
+    background-size: 75%;
 
     button {
       @include standardButton;
@@ -443,7 +443,6 @@
     button {
       @include standardButton;
       width: 100%;
-      max-width: 320px;
     }
   }
 
