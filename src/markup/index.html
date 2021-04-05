@@ -82,14 +82,19 @@
             <p class="text-small">*Опция доступна для новых клиентов по тарифу «СТАРТ»</p>
           </ul>
         </div>
-        <form class="contact-us" action="javascript:void(0);">
+        <form class="contact-us" id="serviceCallback">
+
+          <input type="hidden" name="project_name" value="kmklaw.ru">
+          <input type="hidden" name="admin_email" value="callback@kmklaw.ru">
+          <input type="hidden" name="form_subject" value="Обратный звонок">
+
           <p>Отправьте запрос</p>
           <label for="clientName">Имя:</label>
-          <input id="clientName" type="text" placeholder="Введите Ваше имя">
+          <input id="clientName" type="text" name="name" placeholder="Введите Ваше имя">
           <label for="clientPhone">Телефон*:</label>
-          <input id="clientPhone" type="tel" placeholder="Введите Ваш телефон" required>
+          <input id="clientPhone" type="tel" name="phone" placeholder="Введите Ваш телефон" required>
           <label for="clientComment">Комментарий:</label>
-          <input id="clientComment" type="text" placeholder="Введите Ваш комментарий">
+          <input id="clientComment" type="text" name="comment" placeholder="Введите Ваш комментарий">
           <button type="submit" id="submitClient">Получить консультацию</button>
           <p class="text-small">Нажимая на кнопку, Вы даете согласие на обработку персональных данных</p>
         </form>
@@ -811,22 +816,32 @@
       <button class="close" id="closePopup">Закрыть</button>
       <section class="popup-container" id="popupCallback" hidden>
         <h2 class="visually-hidden">Обратный звонок</h2>
-        <form class="contact-us" action="javascript:void(0);">
+        <form class="contact-us" id="serviceCallbackPopup">
+
+          <input type="hidden" name="project_name" value="kmklaw.ru">
+          <input type="hidden" name="admin_email" value="callback@kmklaw.ru">
+          <input type="hidden" name="form_subject" value="Обратный звонок">
+
           <label for="clientNamePopup">Имя:</label>
-          <input id="clientNamePopup" type="text" placeholder="Введите Ваше имя">
+          <input id="clientNamePopup" type="text" name="name" placeholder="Введите Ваше имя">
           <label for="clientPhonePopup">Телефон*:</label>
-          <input id="clientPhonePopup" type="tel" placeholder="Введите Ваш телефон" required>
+          <input id="clientPhonePopup" type="tel" name="phone" placeholder="Введите Ваш телефон" required>
           <label for="clientCommentPopup">Комментарий:</label>
-          <input id="clientCommentPopup" type="text" placeholder="Введите Ваш комментарий">
+          <input id="clientCommentPopup" type="text" name="comment" placeholder="Введите Ваш комментарий">
           <button id="submitCallback">ОТПРАВИТЬ</button>
         </form>
       </section>
       <section class="popup-container" id="popupOffer" hidden>
         <h2 class="visually-hidden">Получить коммерческое предложение</h2>
-        <form class="contact-us" action="javascript:void(0);">
+        <form class="contact-us" id="offerPopup">
+
+          <input type="hidden" name="project_name" value="kmklaw.ru">
+          <input type="hidden" name="admin_email" value="callback@kmklaw.ru">
+          <input type="hidden" name="form_subject" value="Коммерческое предложение">
+
           <label for="clientMailPopup">Почта*:</label>
-          <input id="clientMailPopup" type="email" placeholder="Введите Вашу почту" required>
-          <button id="submitOffer">ОТПРАВИТЬ</button>
+          <input id="clientMailPopup" type="email" name="mail" placeholder="Введите Вашу почту" required>
+          <button>ОТПРАВИТЬ</button>
         </form>
       </section>
     </div>
@@ -836,8 +851,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous"></script>
-  <script src="assets/scripts/owl.min.js"></script>
+  <script src="assets/scripts/ajax-mail.min.js"></script>
   <script src="assets/scripts/bundle.min.js"></script>
+  <script src="assets/scripts/owl.min.js"></script>
 </body>
 
 </html>
