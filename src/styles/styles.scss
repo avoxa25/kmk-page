@@ -664,48 +664,58 @@
 
 .owl-carousel.cases {
   .item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    &-wrapper {
+      display: block;
 
-    min-width: 280px;
-
-    .request,
-    .decision {
-      position: relative;
-      width: 49%;
-      min-width: 280px;
-
-      padding: 40px 20px 20px 20px;
-
-      border: 1px solid $red;
-
-
-      &::before {
-        content: "Суть дела:";
-
-        position: absolute;
-        top: 5px;
-
-        color: $red;
-        font-weight: 600;
+      h3 {
+        text-align: center;
       }
     }
 
-    .request {
-      border-right: none;
-      border-bottom: none;
-    }
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
-    .decision {
-      border-color: green;
-      border-top: none;
-      border-left: none;
+      min-width: 280px;
 
-      &::before {
-        content: "Решение:";
+      .request,
+      .decision {
+        position: relative;
+        width: 49%;
+        min-width: 280px;
 
-        color: green;
+        padding: 40px 20px 20px 20px;
+
+        border: 1px solid $red;
+
+
+        &::before {
+          content: "Суть дела:";
+
+          position: absolute;
+          top: 5px;
+
+          color: $red;
+          font-weight: 600;
+        }
+      }
+
+      .request {
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .decision {
+        border-color: green;
+        border-top: none;
+        border-left: none;
+
+        &::before {
+          content: "Решение:";
+
+          color: green;
+        }
       }
     }
   }

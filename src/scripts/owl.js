@@ -3,7 +3,7 @@ const reviews = $("#reviews");
 reviews.owlCarousel({ loop: !0,
     nav: !1,
     center: false,
-    margin: 0,
+    margin: 20,
     loop: false,
     responsive:{ 
         0: { 
