@@ -23,88 +23,6 @@
   }
 }
 
-.menu {
-  &-container {
-    width: 50%;
-  }
-
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-    &>li {
-      margin-right: 10px;
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-  }
-
-  &-open {
-    position: relative;
-
-    display: none;
-    width: 30px;
-    height: 5px;
-
-    background-color: black;
-    border: 0;
-    outline: none;
-
-    transition: transform .25s ease-in-out;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -12px;
-      left: 12px;
-
-      width: 5px;
-      height: 30px;
-
-      background-color: black;
-    }
-
-    &.active {
-      transform: rotateZ(45deg);
-    }
-  }
-}
-
-
-.contacts-list {
-  &>li {
-    position: relative;
-  }
-
-  &>li:first-of-type {
-    margin-bottom: 5px;
-  }
-
-  .phone::before {
-    @include icon;
-    left: -20px;
-
-    width: 15px;
-    height: 100%;
-
-    background-image: url("../../img/icons/phone.min.svg");
-  }
-
-  .mail::before {
-    @include icon;
-    left: -20px;
-
-    width: 15px;
-    height: 100%;
-
-    background-image: url("../../img/icons/mail.min.svg");
-  }
-}
-
 // SERVICE
 
 .service {
@@ -284,12 +202,13 @@
     font-size: 24px;
 
     background-image: url("../../img/request-bg.min.png");
-    background-position: 110% 50%;
+    background-position: 140% 60%;
     background-repeat: no-repeat;
     background-size: 66%;
 
     p {
-      background-color: rgba($color: black, $alpha: 0.5)
+      width: 50%;
+      min-width: 280px;
     }
 
     button {
@@ -395,10 +314,10 @@
     font-size: 24px;
     text-align: right;
 
-    background-image: url("../../img/config.min.png");
-    background-position: 5% 50%;
+    background-image: url("../../img/config.min.svg");
+    background-position: -60% 50%;
     background-repeat: no-repeat;
-    background-size: 45%;
+    background-size: 75%;
 
     button {
       @include standardButton;
@@ -448,7 +367,6 @@
     button {
       @include standardButton;
       width: 100%;
-      max-width: 320px;
     }
   }
 
@@ -503,51 +421,23 @@
     @include inner;
   }
 
-  &-container {
+  &-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
-    .accordion {
-      align-self: flex-start;
+    &>li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      
       width: 30%;
       min-width: 280px;
 
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
 
-      border: 1px solid black;
-      border-radius: 5px;
-
-      transition: max-height .25s ease-in-out;
-
-      &[open] {
-        summary {
-          border-bottom: 1px solid black;
-          border-radius: 5px 5px 0 0;
-
-          &~p {
-            animation: sweep 1s ease-in-out;
-          }
-        }
-      }
-
-      summary {
-        padding: 10px;
-
-        color: $red;
-        font-weight: 600;
-
-        background-color: white;
-        border-radius: 5px;
-
-        &~p {
-          overflow: hidden;
-        }
-      }
-
-      p {
-        padding: 20px;
-      }
+      border-bottom: 1px dotted red;
     }
   }
 }
@@ -670,48 +560,58 @@
 
 .owl-carousel.cases {
   .item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    &-wrapper {
+      display: block;
 
-    min-width: 280px;
-
-    .request,
-    .decision {
-      position: relative;
-      width: 49%;
-      min-width: 280px;
-
-      padding: 40px 20px 20px 20px;
-
-      border: 1px solid $red;
-
-
-      &::before {
-        content: "Суть дела:";
-
-        position: absolute;
-        top: 5px;
-
-        color: $red;
-        font-weight: 600;
+      h3 {
+        text-align: center;
       }
     }
 
-    .request {
-      border-right: none;
-      border-bottom: none;
-    }
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
-    .decision {
-      border-color: green;
-      border-top: none;
-      border-left: none;
+      min-width: 280px;
 
-      &::before {
-        content: "Решение:";
+      .request,
+      .decision {
+        position: relative;
+        width: 49%;
+        min-width: 280px;
 
-        color: green;
+        padding: 40px 20px 20px 20px;
+
+        border: 1px solid $red;
+
+
+        &::before {
+          content: "Суть дела:";
+
+          position: absolute;
+          top: 5px;
+
+          color: $red;
+          font-weight: 600;
+        }
+      }
+
+      .request {
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .decision {
+        border-color: green;
+        border-top: none;
+        border-left: none;
+
+        &::before {
+          content: "Решение:";
+
+          color: green;
+        }
       }
     }
   }
