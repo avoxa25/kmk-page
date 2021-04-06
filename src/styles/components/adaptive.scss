@@ -109,6 +109,19 @@
     }
   }
 
+  // ADVANTAGES
+
+
+  .advantages-inner {
+    padding: 0;
+
+    .image-container {
+      width: 100%;
+      min-width: 320px;
+      min-height: 280px;
+    }
+  }
+
   // DEFENDED
 
   .defended-statistic .text-large {
@@ -133,11 +146,5 @@
 
   .defended-statistic .text-large {
     font-size: 30px;
-  }
-
-  // ADVANTAGES
-
-  .advantages-inner {
-    padding-top: 0;
   }
 }
