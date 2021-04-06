@@ -16,6 +16,8 @@ class Popup {
 
         this.openElements.forEach((oe) => oe.addEventListener(`click`, () => this.ShowPopup(oe)));
         this.closeElement.addEventListener(`click`, () => this.HidePopup());
+        this.wrapperElement.addEventListener(`click`, (event) => !(event.target as Element).closest(`.popup-container`)? this.HidePopup(): false);
+        document.addEventListener(`keyup`, (event) => event.code == `Escape`? this.HidePopup(): false);
     }
 
     public ShowPopup(oe: HTMLButtonElement): void {
