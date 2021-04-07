@@ -1,8 +1,6 @@
 const reviews = $(`#reviews`);
 
-reviews.owlCarousel({ loop: !0,
-    nav: !1,
-    center: false,
+reviews.owlCarousel({
     margin: 20,
     loop: false,
     responsive:{ 

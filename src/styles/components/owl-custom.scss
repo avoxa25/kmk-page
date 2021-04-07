@@ -29,3 +29,15 @@
     }
   }
 }
+
+.reviews-list .owl-dots .owl-dot {
+  &.active {
+    span {
+      background-color: red;
+    }
+  }
+
+  span {
+    background-color: black;
+  }
+}
