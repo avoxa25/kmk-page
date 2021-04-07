@@ -1,30 +1,12 @@
 $(document).ready(function() {
 
-	$("#serviceCallback").submit(function() {
-		let th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: th.serialize()
-		}).done(function() {
-			location.reload();
-		});
-		return false;
-	});
+	const elementsArray = [
+		$("#serviceCallback"),
+		$("#serviceCallbackPopup"),
+		$("#offerPopup")
+	]
 
-	$("#serviceCallbackPopup").submit(function() {
-		let th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: th.serialize()
-		}).done(function() {
-			location.reload();
-		});
-		return false;
-	});
-
-	$("#offerPopup").submit(function() {
+	elementsArray.forEach((e) => e.submit(() => {
 		let th = $(this);
 		$.ajax({
 			type: "POST",
@@ -32,8 +14,9 @@ $(document).ready(function() {
 			data: th.serialize()
 		}).done(function() {
 			console.log("DONE")
+			//location.reload();
 		});
 		return false;
-	});
+	}))
 
 });
