@@ -1,51 +1,40 @@
-// -- TABLET 768px --
+// -- TABLET L 960px --
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+
+  //HEADER
   .logo-underheader {
     display: none;
   }
 
-  .tariffs-inner {
-    .tariffs-table {
-      display: none;
-
-      &.mobile {
-        display: table;
-      }
-    }
+  //WORKS 
+  .works-list>li {
+    width: 50%;
   }
 }
 
-// -- MOBILE L 425px --
+// -- TABLET M 848px --
 
-@media (max-width: 425px) {
-  // HEADER
+@media (max-width: 848px) {
 
-  .header-inner,
-  .service-inner,
-  .defended-inner,
-  .advantages-inner,
-  .request-inner,
-  .tariffs-inner,
-  .config-inner,
-  .profit-inner,
-  .specializations-inner,
-  .speakers-inner,
-  .works-inner,
-  .cases-inner,
-  .reviews-inner,
-  .contacts-inner,
-  .footer-inner,
-  .popup-inner {
-    padding: 20px;
+  //SERVICE
+  .service-container,
+  .contact-us {
+    width: 66%;
   }
+}
 
+
+// -- TABLET S 768px --
+
+@media (max-width: 768px) {
+
+  //HEADER
   .contacts-list {
     display: none;
   }
 
   // MENU
-
   @keyframes translate {
     0% {
       transform: translateX(0);
@@ -109,9 +98,17 @@
     }
   }
 
+  //SERVICE
+  .service-container,
+  .contact-us {
+    width: 100%;
+  }
+
+  .service-list {
+    list-style-position: inside;
+  }
+
   // ADVANTAGES
-
-
   .advantages-inner {
     padding: 0;
 
@@ -120,22 +117,68 @@
       min-width: 320px;
       min-height: 280px;
 
-      background-position: 50% 35%;
+      background-position: 50% 32%;
     }
   }
 
-  // DEFENDED
+  //TARIFFS
+  .tariffs-inner {
+    .tariffs-table {
+      display: none;
 
+      &.mobile {
+        display: table;
+      }
+    }
+  }
+
+  //POPUP
+
+  .popup-inner .close {
+    top: 0;
+    right: 0;
+  }
+}
+
+// -- MOBILE L 425px --
+
+@media (max-width: 425px) {
+
+  // HEADER
+  .header-inner,
+  .service-inner,
+  .defended-inner,
+  .request-inner,
+  .tariffs-inner,
+  .config-inner,
+  .profit-inner,
+  .specializations-inner,
+  .speakers-inner,
+  .works-inner,
+  .cases-inner,
+  .reviews-inner,
+  .contacts-inner,
+  .footer-inner,
+  .popup-inner {
+    padding: 20px;
+  }
+
+  // DEFENDED
   .defended-statistic .text-large {
     font-size: 40px;
+  }
+
+  //WORKS 
+  .works-list>li {
+    width: 100%;
   }
 }
 
 // -- MOBILE M 375px --
 
 @media (max-width: 375px) {
-  // DEFENDED
 
+  // DEFENDED
   .defended-statistic .text-large {
     font-size: 34px;
   }
@@ -144,8 +187,8 @@
 // -- MOBILE S 320px --
 
 @media (max-width: 320px) {
-  // DEFENDED
 
+  // DEFENDED
   .defended-statistic .text-large {
     font-size: 30px;
   }
