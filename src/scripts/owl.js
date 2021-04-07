@@ -1,4 +1,4 @@
-const reviews = $("#reviews");
+const reviews = $(`#reviews`);
 
 reviews.owlCarousel({ loop: !0,
     nav: !1,
@@ -14,7 +14,7 @@ reviews.owlCarousel({ loop: !0,
             items: 3 }
          }});
 
-const cases = $("#cases"); 
+const cases = $(`#cases`); 
 
 cases.owlCarousel({
     margin: 10,
