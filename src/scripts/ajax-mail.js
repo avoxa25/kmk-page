@@ -13,8 +13,7 @@ $(document).ready(function() {
 			url: "mail.php",
 			data: th.serialize()
 		}).done(function() {
-			console.log("DONE")
-			//location.reload();
+			window.popup.HidePopup()
 		});
 		return false;
 	}))
