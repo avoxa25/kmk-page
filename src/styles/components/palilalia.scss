@@ -14,6 +14,23 @@ $red: red;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+a.button {
+  @include standardButton;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35%;
+  min-width: 280px;
+  height: 45px;
+}
+
+button.standard-button {
+  @include standardButton;
+}
+
 .menu {
     &-container {
       width: 50%;
@@ -64,7 +81,6 @@ $red: red;
       }
     }
   }
-  
   
   .contacts-list {
     &>li {
@@ -140,11 +156,6 @@ $red: red;
         border: 0;
         border-radius: 5px;
     }
-
-    button {
-        @include standardButton;
-    }
-
 }
 
 .text-small {
@@ -157,15 +168,3 @@ $red: red;
 .text-center {
     text-align: center;
 }
-
-a.button {
-    @include standardButton;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 35%;
-    min-width: 280px;
-    height: 45px;
-  }
