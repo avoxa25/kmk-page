@@ -1,29 +1,11 @@
-[hidden] {
-  display: none !important;
-}
-
-summary::marker {
-  display: none;
-}
-
 * {
   box-sizing: border-box;
 
   font-family: 'Open Sans', sans-serif;
 }
 
-BODY {
-  margin: 0;
-}
-
-P,
-UL {
-  margin: 0;
-  padding: 0;
-}
-
-UL {
-  list-style-type: none;
+[hidden] {
+  display: none !important;
 }
 
 A {
@@ -36,6 +18,24 @@ A {
   }
 }
 
+BODY {
+  margin: 0;
+}
+
 H2 {
   margin-top: 0;
+}
+
+P,
+UL {
+  margin: 0;
+  padding: 0;
+}
+
+summary::marker {
+  display: none;
+}
+
+UL {
+  list-style-type: none;
 }
