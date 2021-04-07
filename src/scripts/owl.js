@@ -1,4 +1,5 @@
 const reviews = $(`#reviews`);
+const cases = $(`#cases`); 
 
 reviews.owlCarousel({
     margin: 20,
@@ -12,7 +13,6 @@ reviews.owlCarousel({
             items: 3 }
          }});
 
-const cases = $(`#cases`); 
 
 cases.owlCarousel({
     margin: 10,
