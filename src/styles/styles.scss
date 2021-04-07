@@ -4,7 +4,6 @@
 @import "./components/palilalia";
 
 //HEADER
-
 .header {
   &-wrapper {
     @include wrapper;
@@ -24,7 +23,6 @@
 }
 
 // SERVICE
-
 .service {
   &-wrapper {
     @include wrapper;
@@ -38,11 +36,11 @@
   &-inner {
     @include inner;
 
-    padding: 150px 40px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    padding: 150px 40px;
 
     color: white;
     font-size: 24px;
@@ -54,6 +52,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     width: 66%;
 
     margin-bottom: 20px;
@@ -70,7 +69,6 @@
 }
 
 // DEFENDED
-
 .defended {
   &-wrapper {
     @include wrapper;
@@ -106,7 +104,6 @@
 }
 
 // ADVANTAGES
-
 .advantages {
   &-wrapper {
     @include wrapper;
@@ -149,40 +146,37 @@
       margin-bottom: 18px;
     }
 
-    .team::before {
+    .team::before,
+    .justice::before,
+    .cash::before,
+    .time::before,
+    .partnership::before {
       @include icon;
+    }
 
+    .team::before {
       background-image: url("../../img/icons/team.min.svg");
     }
 
     .justice::before {
-      @include icon;
-
       background-image: url("../../img/icons/justice.min.svg");
     }
 
     .cash::before {
-      @include icon;
-
       background-image: url("../../img/icons/cash.min.svg");
     }
 
     .time::before {
-      @include icon;
-
       background-image: url("../../img/icons/time.min.svg");
     }
 
     .partnership::before {
-      @include icon;
-
       background-image: url("../../img/icons/partnership.min.svg");
     }
   }
 }
 
 // REQUEST
-
 .request {
   &-wrapper {
     @include wrapper;
@@ -210,9 +204,7 @@
       min-width: 280px;
     }
 
-    button {
-      @include standardButton;
-
+    .standard-button {
       max-width: 320px;
 
       margin-top: 20px;
@@ -221,7 +213,6 @@
 }
 
 // TARIFFS
-
 .tariffs {
   &-wrapper {
     @include wrapper;
@@ -268,9 +259,7 @@
         color: gray;
       }
 
-      button {
-        @include standardButton;
-
+      .standard-button {
         width: 100%;
       }
 
@@ -294,7 +283,6 @@
 }
 
 // CONFIG
-
 .config {
   &-wrapper {
     @include wrapper;
@@ -318,9 +306,7 @@
     background-repeat: no-repeat;
     background-size: 75%;
 
-    button {
-      @include standardButton;
-
+    .standard-button {
       width: 100%;
       max-width: 400px;
 
@@ -336,7 +322,6 @@
 }
 
 // PROFIT
-
 .profit {
   &-wrapper {
     @include wrapper;
@@ -363,8 +348,7 @@
       border-bottom: 1px solid gray;
     }
 
-    button {
-      @include standardButton;
+    .standard-button {
       width: 100%;
     }
   }
@@ -398,7 +382,6 @@
 }
 
 // SPECIALIZATION
-
 @keyframes sweep {
   0% {
     max-height: 0;
@@ -442,7 +425,6 @@
 }
 
 // SPEAKERS
-
 .speakers {
   &-wrapper {
     @include wrapper;
@@ -473,7 +455,6 @@
 }
 
 // WORKS
-
 .works {
   &-wrapper {
     @include wrapper;
@@ -546,7 +527,6 @@
 }
 
 // CASES 
-
 .cases {
   &-wrapper {
     @include wrapper;
@@ -617,7 +597,6 @@
 }
 
 // REVIEWS
-
 .reviews {
   &-wrapper {
     @include wrapper;
@@ -631,7 +610,6 @@
 }
 
 // CONTACTS 
-
 .contacts {
   &-wrapper {
     @include wrapper;
@@ -658,8 +636,7 @@
         margin-bottom: 10px;
       }
 
-      button {
-        @include standardButton;
+      .standard-button {
         width: 100%;
 
         margin-top: 40px;
@@ -669,14 +646,19 @@
 }
 
 // MAP 
-
 .map-wrapper {
   width: 100%;
   height: 400px;
+
+  .map {
+    width: 100%;
+    height: 400px;
+
+    border: 0;
+  }
 }
 
 // FOOTER 
-
 .footer {
   &-wrapper {
     @include wrapper;
@@ -694,7 +676,6 @@
 }
 
 // POPUP
-
 .popup {
   &-wrapper {
     @include wrapper;
@@ -725,9 +706,7 @@
 
     transform: translate(-50%, -50%);
 
-    .close {
-      @include standardButton;
-
+    .standard-button.close {
       position: absolute;
       top: 35px;
       right: 40px;

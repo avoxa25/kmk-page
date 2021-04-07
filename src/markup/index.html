@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -19,7 +19,7 @@
     <section class="header-inner">
       <h1 class="visually-hidden">КМК: Юридический аутсорсинг, абонентское юридическое обслуживание</h1>
       <a href="https://www.kmklaw.ru/" class="logo">
-        <img src="img/kmk-logo-r.min.png" alt="Компания КМК" width="85px" height="30px">
+        <img src="img/kmk-logo-r.min.png" alt="Компания КМК" width="85" height="30">
         <p class="logo-underheader">
           <b>
             Юридическая компания
@@ -80,8 +80,8 @@
               <span class="red">24 500 руб.</span>
               в месяц*
             </li>
-            <p class="text-small">*Опция доступна для новых клиентов по тарифу «СТАРТ»</p>
           </ul>
+          <p class="text-small">*Опция доступна для новых клиентов по тарифу «СТАРТ»</p>
         </div>
         <form class="contact-us" id="serviceCallback">
 
@@ -96,7 +96,7 @@
           <input id="clientPhone" type="tel" name="phone" placeholder="Введите Ваш телефон" required>
           <label for="clientComment">Комментарий:</label>
           <input id="clientComment" type="text" name="comment" placeholder="Введите Ваш комментарий">
-          <button type="submit" id="submitClient">Получить консультацию</button>
+          <button class="standard-button">Получить консультацию</button>
           <p class="text-small">Нажимая на кнопку, Вы даете согласие на обработку персональных данных</p>
         </form>
       </section>
@@ -164,7 +164,7 @@
           Оставьте заявку на консультацию, нажав на кнопку ниже и получите дополнительную скидку на годовое абонентское
           юридическое обслуживание
         </p>
-        <button class="open-popup" type="button" data-popup="popupCallback">ПОЛУЧИТЬ СКИДКУ</button>
+        <button class="open-popup standard-button" type="button" data-popup="popupCallback">ПОЛУЧИТЬ СКИДКУ</button>
       </section>
     </div>
 
@@ -280,16 +280,19 @@
                 <b>Выслать предложение</b>
               </td>
               <td>
-                <button class="open-popup start" data-popup="popupOffer" data-type="start">СТАРТ</button>
+                <button class="open-popup start standard-button" data-popup="popupOffer"
+                  data-type="start">СТАРТ</button>
               </td>
               <td>
-                <button class="open-popup base" data-popup="popupOffer" data-type="base">БАЗОВЫЙ</button>
+                <button class="open-popup base standard-button" data-popup="popupOffer"
+                  data-type="base">БАЗОВЫЙ</button>
               </td>
               <td>
-                <button class="open-popup standard" data-popup="popupOffer" data-type="standard">СТАНДАРТНЫЙ</button>
+                <button class="open-popup standard standard-button" data-popup="popupOffer"
+                  data-type="standard">СТАНДАРТНЫЙ</button>
               </td>
               <td>
-                <button class="open-popup vip" data-popup="popupOffer" data-type="vip">БИЗНЕС</button>
+                <button class="open-popup vip standard-button" data-popup="popupOffer" data-type="vip">БИЗНЕС</button>
               </td>
             </tr>
           </tbody>
@@ -349,10 +352,11 @@
                 <td>Консультирование в нерабочее время и выходные дни</td>
                 <td class="non-available"></td>
               </tr>
-              <td colspan="2">
-                <button class="open-popup start" data-popup="popupOffer" data-type="start">ВЫСЛАТЬ
-                  ПРЕДЛОЖЕНИЕ</button>
-              </td>
+              <tr>
+                <td colspan="2">
+                  <button class="open-popup start standard-button" data-popup="popupOffer" data-type="start">ВЫСЛАТЬ
+                    ПРЕДЛОЖЕНИЕ</button>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -412,7 +416,8 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="open-popup base" data-popup="popupOffer" data-type="base">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
+                  <button class="open-popup base standard-button" data-popup="popupOffer" data-type="base">ВЫСЛАТЬ
+                    ПРЕДЛОЖЕНИЕ</button>
                 </td>
               </tr>
             </tbody>
@@ -473,7 +478,8 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="open-popup standard" data-popup="popupOffer" data-type="standard">ВЫСЛАТЬ
+                  <button class="open-popup standard standard-button" data-popup="popupOffer"
+                    data-type="standard">ВЫСЛАТЬ
                     ПРЕДЛОЖЕНИЕ</button>
                 </td>
               </tr>
@@ -535,7 +541,8 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <button class="open-popup vip" data-popup="popupOffer" data-type="vip">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
+                  <button class="open-popup vip standard-button" data-popup="popupOffer" data-type="vip">ВЫСЛАТЬ
+                    ПРЕДЛОЖЕНИЕ</button>
                 </td>
               </tr>
             </tbody>
@@ -551,7 +558,7 @@
           Не подошел ни один тариф?
           Соберем индивидуальный пакет под ваши задачи
         </p>
-        <button class="open-popup" id="buttonPopup" data-popup="popupCallback">СОБРАТЬ ТАРИФ</button>
+        <button class="open-popup standard-button" id="buttonPopup" data-popup="popupCallback">СОБРАТЬ ТАРИФ</button>
       </section>
     </div>
 
@@ -648,7 +655,7 @@
             </tbody>
           </table>
         </div>
-        <button class="open-popup" data-popup="popupCallback">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
+        <button class="open-popup standard-button" data-popup="popupCallback">ВЫСЛАТЬ ПРЕДЛОЖЕНИЕ</button>
       </section>
     </div>
 
@@ -674,19 +681,34 @@
         <h2>Наши юристы постоянные спикеры</h2>
         <ul class="speakers-list">
           <li>
-            <img src="img/speakers/first-channel.min.png" alt="Первый канал">
+            <picture>
+              <source media="(min-resolution: 2dppx)" srcset="img/speakers/first-channel.min.png">
+              <img src="img/speakers/first-channel.min.jpg" alt="Первый канал">
+            </picture>
           </li>
           <li>
-            <img src="img/speakers/ria-ina.min.png" alt="РИА Новости">
+            <picture>
+              <source media="(min-resolution: 2dppx)" srcset="img/speakers/ria-ina.min.png">
+              <img src="img/speakers/ria-ina.min.jpg" alt="РИА Новости">
+            </picture>
           </li>
           <li>
-            <img src="img/speakers/360-channel.min.png" alt="360 Подмосковье">
+            <picture>
+              <source media="(min-resolution: 2dppx)" srcset="img/speakers/360-channel.min.png">
+              <img src="img/speakers/360-channel.min.jpg" alt="360 Подмосковье">
+            </picture>
           </li>
           <li>
-            <img src="img/speakers/regnum-ina.min.png" alt="ИА Регнум">
+            <picture>
+              <source media="(min-resolution: 2dppx)" srcset="img/speakers/regnum-ina.min.png">
+              <img src="img/speakers/regnum-ina.min.jpg" alt="ИА Регнум">
+            </picture>
           </li>
           <li>
-            <img src="img/speakers/speaks-moscow-radio.min.png" alt="Радио Говорит Москва 94.8fm">
+            <picture>
+              <source media="(min-resolution: 2dppx)" srcset="img/speakers/speaks-moscow-radio.min.png">
+              <img src="img/speakers/speaks-moscow-radio.min.jpg" alt="Радио Говорит Москва 94.8fm">
+            </picture>
           </li>
         </ul>
       </section>
@@ -845,8 +867,9 @@
             </div>
           </section>
           <section class="item-wrapper">
+            <h3 class="visually-hidden">Показать больше кейсов</h3>
             <div class="item-inner">
-              <a class="button" href="https://www.kmklaw.ru/kejsy/">Больше кейсов</a>
+              <a class="button standard-button" href="https://www.kmklaw.ru/kejsy/">Больше кейсов</a>
             </div>
           </section>
         </div>
@@ -859,18 +882,18 @@
         <ul id="reviews" class="owl-carousel owl-theme reviews-list">
           <li>
             <a class="review" data-fancybox="gallery" href="img/reviews/getstone.min.jpg"><img
-                src="img/reviews/getstone-preview.min.jpg"></a>
+                src="img/reviews/getstone-preview.min.jpg" alt="Отзыв компании Гет Стоун"></a>
           </li>
           <li>
             <a class="review" data-fancybox="gallery" href="img/reviews/hostelacademia.min.jpg"><img
-                src="img/reviews/hostelacademia-preview.min.jpg"></a>
+                src="img/reviews/hostelacademia-preview.min.jpg" alt="Отзыв компании Хостел Академия"></a>
           </li>
           <li>
             <a class="review" data-fancybox="gallery" href="img/reviews/laytservis.min.jpg"><img
-                src="img/reviews/laytservis-preview.min.jpg"></a>
+                src="img/reviews/laytservis-preview.min.jpg" alt="Отзыв компании Лайт Сервис"></a>
           </li>
           <li>
-            <a class="button" href="https://www.kmklaw.ru/o-kompanii/otzyvy/">Больше отзывов</a>
+            <a class="button standard-button" href="https://www.kmklaw.ru/o-kompanii/otzyvy/">Больше отзывов</a>
           </li>
         </ul>
       </section>
@@ -897,7 +920,7 @@
             <h3>Адрес:</h3>
             <p>г. Москва, проезд Добролюбова, 3с3,<br>
               метро «Бутырская»</p>
-            <button class="open-popup" data-popup="popupCallback">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+            <button class="open-popup standard-button" data-popup="popupCallback">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
           </div>
         </div>
       </section>
@@ -905,23 +928,23 @@
 
     <section class="map-wrapper">
       <h2 class="visually-hidden">Как к нам проехать</h2>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a37006c36e28a9a167228671da87c75bd57a0dc9a9ec0c944578f5d277e44f0&amp;source=constructor"
-        width="100%" height="400" frameborder="0"></iframe>
+      <iframe class="map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a37006c36e28a9a167228671da87c75bd57a0dc9a9ec0c944578f5d277e44f0&amp;source=constructor"></iframe>
     </section>
   </main>
 
   <footer class="footer-wrapper">
     <section class="footer-inner">
+      <h2 class="visually-hidden">Нижний блок сайта</h2>
       <a href="https://www.kmklaw.ru/" class="logo">
-        <img src="img/kmk-logo-r.min.png" alt="Компания КМК" width="85px" height="30px">
+        <img src="img/kmk-logo-r.min.png" alt="Компания КМК" width="85" height="30">
         <p class="logo-underheader">
           <b>
             Юридическая компания
           </b>
         </p>
       </a>
-      <nav class="menu-container" id="menuContainer">
+      <nav class="menu-container">
         <ul class="menu-list">
           <li>
             <a href="https://www.kmklaw.ru/o-kompanii/">О компании</a>
@@ -954,7 +977,7 @@
 
   <div class="popup-wrapper" id="wrapperPopup" hidden>
     <div class="popup-inner">
-      <button class="close" id="closePopup">Закрыть</button>
+      <button class="standard-button close" id="closePopup">Закрыть</button>
       <section class="popup-container" id="popupCallback" hidden>
         <h2>Обратный звонок</h2>
         <form class="contact-us" id="serviceCallbackPopup">
@@ -969,7 +992,7 @@
           <input id="clientPhonePopup" type="tel" name="phone" placeholder="Введите Ваш телефон" required>
           <label for="clientCommentPopup">Комментарий:</label>
           <input id="clientCommentPopup" type="text" name="comment" placeholder="Введите Ваш комментарий">
-          <button id="submitCallback">ОТПРАВИТЬ</button>
+          <button class="standard-button">ОТПРАВИТЬ</button>
         </form>
       </section>
       <section class="popup-container" id="popupOffer" hidden>
@@ -983,7 +1006,7 @@
           <label for="clientMailPopup">Почта*:</label>
           <input id="clientMailPopup" type="email" name="mail" placeholder="Введите Вашу почту" required>
           <input type="hidden" name="offer type" id="inputOfferType" value="">
-          <button>ОТПРАВИТЬ</button>
+          <button class="standard-button">ОТПРАВИТЬ</button>
         </form>
       </section>
     </div>

@@ -60,6 +60,7 @@
 
       background-color: #e7e7e7;
       box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.6);
+
       transition: transform .25s ease-in-out;
 
       a {
@@ -91,6 +92,7 @@
 
       &.active+.menu-container {
         display: block;
+        
         transform: translateX(320px);
 
         animation: translate .25s ease-in-out;
