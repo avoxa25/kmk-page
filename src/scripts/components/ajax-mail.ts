@@ -24,8 +24,10 @@ class AjaxMail {
 		if(response.ok) {
 			const result = await response.json();
 			console.log(result.message);
+			(window as any).popup.HidePopup();
+			form.reset();
 		} else {
-			console.log(`Ошибка`);
+			alert(`Ошибка сервера`);
 		}
 	}
 }
