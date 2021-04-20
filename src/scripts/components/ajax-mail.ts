@@ -8,11 +8,11 @@ class AjaxMail {
 			document.querySelector(`#offerPopup`) as HTMLFormElement,
 		]
 
-		this.elements.forEach((el) => el.addEventListener(`submit`, () => this.SendForm(el)));
+		this.elements.forEach((el) => el.addEventListener(`submit`, (e) => this.SendForm(e, el)));
 	}
 
-	private async SendForm(form: HTMLFormElement): Promise<void> {
-		form.preventDefault();
+	private async SendForm(event: Event, form: HTMLFormElement): Promise<void> {
+		event.preventDefault();
 
 		const data = new FormData(form);
 

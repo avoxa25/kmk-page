@@ -1,52 +1,40 @@
 <?php
 
-$method = $_SERVER['REQUEST_METHOD'];
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-//Script Foreach
-$c = true;
-if ( $method === 'POST' ) {
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
 
-	$project_name = trim($_POST["project_name"]);
-	$admin_email  = trim($_POST["admin_email"]);
-	$form_subject = trim($_POST["form_subject"]);
+$mail = new PHPMailer(true);
 
-	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+try {
+  $mail->setFrom('abdullaev.vladimir@ya.ru', 'Обратная связь');
+  $mail->addAddress('abdullaev.vladimir@ya.ru');
+
+  $mail->isHTML(true);
+  $mail->Subject = trim($_POST["form_subject"]);
+
+  foreach ($_POST as $key => $value) {
+    if ($value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject") {
+      $body .= "
+			" . (($c = !$c) ? '<tr>' : '<tr style="background-color: #f8f8f8;">') . "
 				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
 				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
 			</tr>
 			";
-		}
-	}
-} else if ( $method === 'GET' ) {
+    }
+  }
 
-	$project_name = trim($_GET["project_name"]);
-	$admin_email  = trim($_GET["admin_email"]);
-	$form_subject = trim($_GET["form_subject"]);
+  $mail->Body = $body;
 
-	foreach ( $_GET as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			</tr>
-			";
-		}
-	}
+  $mail->send();
+  $message = 'Сообщение отправлено!';
+} catch (Exception $e) {
+  $message = "Ошибка: {$mail->ErrorInfo}";
 }
 
-$message = "<table style='width: 100%;'>$message</table>";
+$response = ['message' => $message];
 
-function adopt($text) {
-	return '=?UTF-8?B?'.Base64_encode($text).'?=';
-}
-
-$headers = "MIME-Version: 1.0" . PHP_EOL .
-"Content-Type: text/html; charset=utf-8" . PHP_EOL .
-'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
-'Reply-To: '.$admin_email.'' . PHP_EOL;
-
-mail($admin_email, adopt($form_subject), $message, $headers );
+header('Content-type: application/json');
+echo json_encode($response);
