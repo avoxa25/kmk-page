@@ -44,7 +44,7 @@ class Offer {
             }
             case (`vip`):
                 this.offerType = 3;
-                this.inputElement.value = `VIP`;
+                this.inputElement.value = `Бизнес`;
         }
     }
 

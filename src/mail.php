@@ -7,10 +7,11 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
+$c = true;
 
 try {
-  $mail->setFrom('abdullaev.vladimir@ya.ru', 'Обратная связь');
-  $mail->addAddress('abdullaev.vladimir@ya.ru');
+  $mail->setFrom('callback@kmklaw.ru', 'Запрос со страницы аутсорса');
+  $mail->addAddress('info@kmklaw.ru');
 
   $mail->isHTML(true);
   $mail->Subject = trim($_POST["form_subject"]);
@@ -26,7 +27,7 @@ try {
     }
   }
 
-  $mail->Body = $body;
+  $mail->Body = "<table style='width: 100%;'>$body</table>"; 
 
   $mail->send();
   $message = 'Сообщение отправлено!';
