@@ -1,3 +1,4 @@
+import './components/ajax-mail'
 import './components/mobile-menu';
 import './components/offer';
 import './components/popup';
