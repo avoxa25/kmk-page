@@ -7,13 +7,17 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
+
 $c = true;
 
 try {
   $mail->setFrom('callback@kmklaw.ru', 'Запрос со страницы аутсорса');
   $mail->addAddress('info@kmklaw.ru');
 
+  $mail->Charset = 'UTF-8';
+  $mail->setLanguage('ru', 'phpmailer/language/');
   $mail->isHTML(true);
+  
   $mail->Subject = trim($_POST["form_subject"]);
 
   foreach ($_POST as $key => $value) {
